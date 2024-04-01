@@ -1,0 +1,778 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>LAB4: 如何召唤"沉睡的软件" · WQ GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="keyboards.html" />
+    
+    
+    <link rel="prev" href="../lab3/WaterLight.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../lab0/introduction.html">
+            
+                <a href="../lab0/introduction.html">
+            
+                    
+                    LAB0: 工欲善其事 必先利其器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../lab0/FPGAintro.html">
+            
+                <a href="../lab0/FPGAintro.html">
+            
+                    
+                    FPGA 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../lab0/whyFPGA.html">
+            
+                <a href="../lab0/whyFPGA.html">
+            
+                    
+                    为什么是 FPGA？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../lab0/design_method.html">
+            
+                <a href="../lab0/design_method.html">
+            
+                    
+                    设计方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../lab0/board_intro.html">
+            
+                <a href="../lab0/board_intro.html">
+            
+                    
+                    平台介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../lab0/intro_tools.html">
+            
+                <a href="../lab0/intro_tools.html">
+            
+                    
+                    软硬件关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../lab0/keil.html">
+            
+                <a href="../lab0/keil.html">
+            
+                    
+                    Keil
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../lab0/td.html">
+            
+                <a href="../lab0/td.html">
+            
+                    
+                    TD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../lab0/modelsim.html">
+            
+                <a href="../lab0/modelsim.html">
+            
+                    
+                    Modelsim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lab1/introduction.html">
+            
+                <a href="../lab1/introduction.html">
+            
+                    
+                    LAB1: "施法"让 CPU 动起来
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lab1/sec_1.html">
+            
+                <a href="../lab1/sec_1.html">
+            
+                    
+                    ARM 汇编回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lab1/sec_2.html">
+            
+                <a href="../lab1/sec_2.html">
+            
+                    
+                    搭建 Keil 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lab1/sec_3.html">
+            
+                <a href="../lab1/sec_3.html">
+            
+                    
+                    运行吧, 第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lab1/sec_5.html">
+            
+                <a href="../lab1/sec_5.html">
+            
+                    
+                    栈 - 函数调用的指挥官
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lab1/sec_6.html">
+            
+                <a href="../lab1/sec_6.html">
+            
+                    
+                    自己动手, 理解函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../lab2/introduction.html">
+            
+                <a href="../lab2/introduction.html">
+            
+                    
+                    LAB2: "点石成金" - 实现你的首个 SoC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../lab2/sec_1.html">
+            
+                <a href="../lab2/sec_1.html">
+            
+                    
+                    硬件部分说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../lab2/sec_2.html">
+            
+                <a href="../lab2/sec_2.html">
+            
+                    
+                    搭建 Keil 工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../lab2/sec_3.html">
+            
+                <a href="../lab2/sec_3.html">
+            
+                    
+                    Modelsim 仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../lab2/sec_4.html">
+            
+                <a href="../lab2/sec_4.html">
+            
+                    
+                    下载比特流到 FPGA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../lab2/sec_5.html">
+            
+                <a href="../lab2/sec_5.html">
+            
+                    
+                    将硬件固化到开发板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../lab2/sec_6.html">
+            
+                <a href="../lab2/sec_6.html">
+            
+                    
+                    使用 Keil 调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../lab3/introduction.html">
+            
+                <a href="../lab3/introduction.html">
+            
+                    
+                    LAB3: "灯, 等灯, 等灯"-流水灯的几种点法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../lab3/data_storage.html">
+            
+                <a href="../lab3/data_storage.html">
+            
+                    
+                    数据存储器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../lab3/GPIO.html">
+            
+                <a href="../lab3/GPIO.html">
+            
+                    
+                    GPIO外设实现流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../lab3/WaterLight.html">
+            
+                <a href="../lab3/WaterLight.html">
+            
+                    
+                    硬件流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    LAB4: 如何召唤"沉睡的软件"
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="keyboards.html">
+            
+                <a href="keyboards.html">
+            
+                    
+                    矩阵键盘原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="keyboards_waterlight.html">
+            
+                <a href="keyboards_waterlight.html">
+            
+                    
+                    使用矩阵键盘4个按键控制流水灯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="keyboards_led.html">
+            
+                <a href="keyboards_led.html">
+            
+                    
+                    使用矩阵键盘控制数码管显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../verilog/introduction.html">
+            
+                <a href="../verilog/introduction.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../verilog/grammar.html">
+            
+                <a href="../verilog/grammar.html">
+            
+                    
+                    Verilog基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../verilog/enable_signal.html">
+            
+                <a href="../verilog/enable_signal.html">
+            
+                    
+                    使能信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../verilog/decoder.html">
+            
+                <a href="../verilog/decoder.html">
+            
+                    
+                    总线译码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq/introduction.html">
+            
+                <a href="../faq/introduction.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../add_notice.html">
+            
+                <a href="../add_notice.html">
+            
+                    
+                    补充通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../about/introduction.html">
+            
+                <a href="../about/introduction.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >LAB4: 如何召唤"沉睡的软件"</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lab4-&#x5982;&#x4F55;&#x53EC;&#x5524;&#x6C89;&#x7761;&#x7684;&#x8F6F;&#x4EF6;">LAB4: &#x5982;&#x4F55;&#x53EC;&#x5524;&quot;&#x6C89;&#x7761;&#x7684;&#x8F6F;&#x4EF6;&quot;</h1>
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x5173;&#x4E8E;lab4"><i class="fa fa-lightbulb-o"></i> &#x5173;&#x4E8E;LAB4</h3></div><div class="panel-body"><ul>
+<li>&#x672C;&#x5B9E;&#x9A8C;&#x5BF9;&#x5E94;&#x5B9E;&#x9A8C;&#x6307;&#x5BFC;&#x4E66;&#x7684;&#x7B2C; 7 &#x7AE0; &quot;C&#x8BED;&#x8A00;&#x7F16;&#x7A0B;&#x4E0E;&#x4E2D;&#x65AD;&quot;</li>
+<li>&#x672C;&#x5B9E;&#x9A8C;&#x5C06;&#x4EE5;&#x952E;&#x76D8;&#x6A21;&#x5757;&#x5B9E;&#x9A8C;&#x4E3A;&#x57FA;&#x7840;, &#x4E86;&#x89E3; CPU &#x7684;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x4EE5;&#x53CA;&#x4F7F;&#x7528; C &#x8BED;&#x8A00;&#x9AD8;&#x6548;&#x5730;&#x7F16;&#x7A0B;.</li>
+<li>&#x5B9E;&#x9A8C;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x4E0D;&#x660E;&#x767D;&#x7684;&#x5730;&#x65B9;, &#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x56DE;&#x770B;&#x5B9E;&#x9A8C;&#x6307;&#x5BFC;&#x4E66;&#x7B2C;&#x4E09;&#x7AE0;&#x4E2D;&#x5173;&#x4E8E; Cortex-M0 &#x76F8;&#x5173;&#x7684;&#x5F02;&#x5E38;&#x4E0E;&#x4E2D;&#x65AD;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;.</li>
+</ul></div></div>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5B9E;&#x9A8C;&#x80FD;&#x5B66;&#x5230;&#x4EC0;&#x4E48;"><i class="fa fa-info-circle"></i> &#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5B9E;&#x9A8C;&#x80FD;&#x5B66;&#x5230;&#x4EC0;&#x4E48;</h3></div><div class="panel-body"><ul>
+<li>&#x672C;&#x5B9E;&#x9A8C;&#x4E3B;&#x8981;&#x7528;&#x4E24;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x5B9E;&#x73B0;&#x4E86; Cortex-M0 &#x7684;&#x4E2D;&#x65AD;&#x529F;&#x80FD;. &#x901A;&#x8FC7;&#x5B9E;&#x9A8C;&#x8FC7;&#x7A0B;, &#x6211;&#x4EEC;&#x80FD;&#x591F;&#x89C2;&#x5BDF;&#x5230;&#x5904;&#x7406;&#x5668;&#x5904;&#x7406;&#x4E2D;&#x65AD;&#x7684;&#x8FC7;&#x7A0B;, &#x4EE5;&#x53CA;&#x5904;&#x7406;&#x5668;&#x5185;&#x90E8;&#x7684;&#x53D8;&#x5316;. </li>
+<li>&#x540C;&#x65F6;&#x4F1A;&#x5B66;&#x4E60; C &#x8BED;&#x8A00;&#x9AD8;&#x6548;&#x7F16;&#x7A0B;&#x7684;&#x65B9;&#x6CD5;. &#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x542F;&#x52A8;&#x6587;&#x4EF6; startup_CMSDK_CM0.s, &#x6211;&#x4EEC;&#x80FD;&#x591F;&#x4F7F;&#x7528; C &#x8BED;&#x8A00;&#x5BF9;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;. &#x4E5F;&#x5229;&#x7528;&#x4E86; C &#x8BED;&#x8A00;&#x4E2D;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x7279;&#x6027;, &#x5BF9;&#x603B;&#x7EBF;&#x4E0A;&#x5916;&#x8BBE;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x8FDB;&#x884C;&#x6620;&#x5C04;.</li>
+</ul></div></div>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By UESTC Intelligent Chip and System Design Lab. &#x91C7;&#x7528;<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 3.0 &#x4E2D;&#x56FD;&#x5927;&#x9646; &#x8BB8;&#x53EF;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E; 2022-05-20 19:03:02 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../lab3/WaterLight.html" class="navigation navigation-prev " aria-label="Previous page: 硬件流水灯">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="keyboards.html" class="navigation navigation-next " aria-label="Next page: 矩阵键盘原理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LAB4: 如何召唤\"沉睡的软件\"","level":"1.6","depth":1,"next":{"title":"矩阵键盘原理","level":"1.6.1","depth":2,"path":"lab4/keyboards.md","ref":"lab4/keyboards.md","articles":[]},"previous":{"title":"硬件流水灯","level":"1.5.3","depth":2,"path":"lab3/WaterLight.md","ref":"lab3/WaterLight.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","callouts","page-footer-ex","-livereload","theme-comscore","-sharing","livereload"],"styles":{"website":"styles/styles.css"},"pluginsConfig":{"callouts":{"important":{"alert":"danger","picto":"fa-bullhorn"},"danger":{"alert":"danger","picto":"fa-exclamation-circle"},"question":{"alert":"info","picto":"fa-question-circle"},"hint":{"alert":"success","picto":"fa-lightbulb-o"},"showTypeInHeader":false,"must":{"alert":"warning","picto":"fa-edit"},"flag":{"alert":"success","picto":"fa-flag"},"info":{"alert":"info","picto":"fa-info-circle"},"note":{"alert":"info","picto":"fa-edit"},"fread":{"alert":"info","picto":"fa-comment"}},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"导航","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","visible":true},"page-footer-ex":{"copyright":"By UESTC Intelligent Chip and System Design Lab. 采用[知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WQ GitBook","gitbook":"*"},"file":{"path":"lab4/introduction.md","mtime":"2022-05-20T11:03:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-31T13:35:53.361Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

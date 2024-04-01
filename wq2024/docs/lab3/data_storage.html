@@ -1,0 +1,828 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据存储器 · WQ GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="GPIO.html" />
+    
+    
+    <link rel="prev" href="introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../lab0/introduction.html">
+            
+                <a href="../lab0/introduction.html">
+            
+                    
+                    LAB0: 工欲善其事 必先利其器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../lab0/FPGAintro.html">
+            
+                <a href="../lab0/FPGAintro.html">
+            
+                    
+                    FPGA 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../lab0/whyFPGA.html">
+            
+                <a href="../lab0/whyFPGA.html">
+            
+                    
+                    为什么是 FPGA？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../lab0/design_method.html">
+            
+                <a href="../lab0/design_method.html">
+            
+                    
+                    设计方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../lab0/board_intro.html">
+            
+                <a href="../lab0/board_intro.html">
+            
+                    
+                    平台介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../lab0/intro_tools.html">
+            
+                <a href="../lab0/intro_tools.html">
+            
+                    
+                    软硬件关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../lab0/keil.html">
+            
+                <a href="../lab0/keil.html">
+            
+                    
+                    Keil
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../lab0/td.html">
+            
+                <a href="../lab0/td.html">
+            
+                    
+                    TD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../lab0/modelsim.html">
+            
+                <a href="../lab0/modelsim.html">
+            
+                    
+                    Modelsim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lab1/introduction.html">
+            
+                <a href="../lab1/introduction.html">
+            
+                    
+                    LAB1: "施法"让 CPU 动起来
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lab1/sec_1.html">
+            
+                <a href="../lab1/sec_1.html">
+            
+                    
+                    ARM 汇编回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lab1/sec_2.html">
+            
+                <a href="../lab1/sec_2.html">
+            
+                    
+                    搭建 Keil 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lab1/sec_3.html">
+            
+                <a href="../lab1/sec_3.html">
+            
+                    
+                    运行吧, 第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lab1/sec_5.html">
+            
+                <a href="../lab1/sec_5.html">
+            
+                    
+                    栈 - 函数调用的指挥官
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lab1/sec_6.html">
+            
+                <a href="../lab1/sec_6.html">
+            
+                    
+                    自己动手, 理解函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../lab2/introduction.html">
+            
+                <a href="../lab2/introduction.html">
+            
+                    
+                    LAB2: "点石成金" - 实现你的首个 SoC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../lab2/sec_1.html">
+            
+                <a href="../lab2/sec_1.html">
+            
+                    
+                    硬件部分说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../lab2/sec_2.html">
+            
+                <a href="../lab2/sec_2.html">
+            
+                    
+                    搭建 Keil 工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../lab2/sec_3.html">
+            
+                <a href="../lab2/sec_3.html">
+            
+                    
+                    Modelsim 仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../lab2/sec_4.html">
+            
+                <a href="../lab2/sec_4.html">
+            
+                    
+                    下载比特流到 FPGA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../lab2/sec_5.html">
+            
+                <a href="../lab2/sec_5.html">
+            
+                    
+                    将硬件固化到开发板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../lab2/sec_6.html">
+            
+                <a href="../lab2/sec_6.html">
+            
+                    
+                    使用 Keil 调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    LAB3: "灯, 等灯, 等灯"-流水灯的几种点法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="data_storage.html">
+            
+                <a href="data_storage.html">
+            
+                    
+                    数据存储器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="GPIO.html">
+            
+                <a href="GPIO.html">
+            
+                    
+                    GPIO外设实现流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="WaterLight.html">
+            
+                <a href="WaterLight.html">
+            
+                    
+                    硬件流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lab4/introduction.html">
+            
+                <a href="../lab4/introduction.html">
+            
+                    
+                    LAB4: 如何召唤"沉睡的软件"
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../lab4/keyboards.html">
+            
+                <a href="../lab4/keyboards.html">
+            
+                    
+                    矩阵键盘原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../lab4/keyboards_waterlight.html">
+            
+                <a href="../lab4/keyboards_waterlight.html">
+            
+                    
+                    使用矩阵键盘4个按键控制流水灯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../lab4/keyboards_led.html">
+            
+                <a href="../lab4/keyboards_led.html">
+            
+                    
+                    使用矩阵键盘控制数码管显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../verilog/introduction.html">
+            
+                <a href="../verilog/introduction.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../verilog/grammar.html">
+            
+                <a href="../verilog/grammar.html">
+            
+                    
+                    Verilog基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../verilog/enable_signal.html">
+            
+                <a href="../verilog/enable_signal.html">
+            
+                    
+                    使能信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../verilog/decoder.html">
+            
+                <a href="../verilog/decoder.html">
+            
+                    
+                    总线译码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq/introduction.html">
+            
+                <a href="../faq/introduction.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../add_notice.html">
+            
+                <a href="../add_notice.html">
+            
+                    
+                    补充通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../about/introduction.html">
+            
+                <a href="../about/introduction.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据存储器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;">&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;</h1>
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x6784;&#x5EFA;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;"><i class="fa fa-flag"></i> &#x6784;&#x5EFA;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;</h3></div><div class="panel-body"><p>&#x5728;&#x5B9E;&#x9A8C;&#x4E8C;&#x4E2D;, &#x6211;&#x4EEC;&#x6784;&#x5EFA;&#x4E86;&#x6709;&#x5904;&#x7406;&#x5668;&#x5185;&#x6838;&#x548C;&#x6307;&#x4EE4;&#x5B58;&#x50A8;&#x5668;&#x7684; SoC, &#x5B83;&#x80FD;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x548C;&#x5229;&#x7528;&#x5185;&#x90E8;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x5B58;&#x50A8;&#x6570;&#x636E;. &#x4F7F;&#x7528;&#x5BC4;&#x5B58;&#x5668;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x663E;&#x7136;&#x662F;&#x4E0D;&#x73B0;&#x5B9E;&#x7684;, &#x56E0;&#x6B64;, &#x5728;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x6267;&#x884C;&#x590D;&#x6742;&#x7A0B;&#x5E8F;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;, &#x5FC5;&#x987B;&#x62E5;&#x6709;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;.</p></div></div>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x5728;soc&#x4E2D;&#x626E;&#x6F14;&#x4EC0;&#x4E48;&#x89D2;&#x8272;"><i class="fa fa-question-circle"></i> &#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x5728;SoC&#x4E2D;&#x626E;&#x6F14;&#x4EC0;&#x4E48;&#x89D2;&#x8272;?</h3></div><div class="panel-body"><p>&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x4E0D;&#x4EC5;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x8FD0;&#x7B97;, &#x8FD8;&#x5728;&#x7A0B;&#x5E8F;&#x8DF3;&#x8F6C;&#x3001;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x6325;&#x91CD;&#x8981;&#x4F5C;&#x7528;. 
+&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x7279;&#x5B9A;&#x7684;&#x4E00;&#x6BB5;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x5668;&#x5206;&#x914D;&#x4E3A;&#x6808;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;, &#x5728;&#x7A0B;&#x5E8F;&#x8DF3;&#x8F6C;&#x548C;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;, &#x4F1A;&#x901A;&#x8FC7;&#x5806;&#x6808;&#x548C;&#x51FA;&#x6808;&#x7684;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x8DF3;&#x8F6C;&#x524D;&#x7684;&#x6267;&#x884C;&#x72B6;&#x51B5;. &#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;Cortex-M0&#x5904;&#x7406;&#x5668;&#x5BF9;&#x5F02;&#x5E38;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;:</p><ul>
+<li>&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x540E;, &#x5BC4;&#x5B58;&#x5668;&#x7EC4;&#x4E2D;&#x7684; 8 &#x4E2A;&#x5BC4;&#x5B58;&#x5668;, &#x5373;R0-R3, R12, &#x94FE;&#x63A5;&#x5BC4;&#x5B58;&#x5668; (R14/LR), &#x8FD4;&#x56DE;&#x5730;&#x5740;&#x5BC4;&#x5B58;&#x5668; (R15/PC) &#x4EE5;&#x53CA;&#x7A0B;&#x5E8F;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668; (xPSR) &#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x538B;&#x5165;&#x5F53;&#x524D;&#x7684;&#x6808;&#x7A7A;&#x95F4;&#x91CC;&#x9762;, &#x4EE5;&#x786E;&#x4FDD;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x8FD8;&#x80FD;&#x7EE7;&#x7EED;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;.</li>
+<li>&#x94FE;&#x63A5;&#x5BC4;&#x5B58;&#x5668; (LR/R14) &#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x4E3A;&#x5F02;&#x5E38;&#x8FD4;&#x56DE;&#x65F6;&#x7684;&#x7279;&#x6B8A;&#x503C; (EXC_RETURN, &#x8BE5;&#x503C;&#x7684;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD4;&#x56DE;&#x5730;&#x5740;&#x7684;&#x9009;&#x62E9;&#x6027;, &#x5982;&#x9009;&#x62E9; MSP &#x8FD8;&#x662F; PSP), &#x7136;&#x540E; PC &#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x66F4;&#x65B0;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x5F02;&#x5E38;&#x5411;&#x91CF;&#x5730;&#x5740;, &#x7136;&#x540E;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x5F02;&#x5E38;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;.</li>
+<li>&#x5728;&#x5F02;&#x5E38;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x4EE5;&#x540E;, &#x4F1A;&#x5229;&#x7528; LR &#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x7684;&#x7279;&#x6B8A;&#x503C;, &#x89E6;&#x53D1;&#x5F02;&#x5E38;&#x7684;&#x8FD4;&#x56DE;&#x673A;&#x5236;. &#x5904;&#x7406;&#x5668;&#x8FD8;&#x4F1A;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x662F;&#x5426;&#x6709;&#x5176;&#x4ED6;&#x5F02;&#x5E38;&#x9700;&#x8981;&#x5904;&#x7406;, &#x5982;&#x679C;&#x6CA1;&#x6709;, &#x5904;&#x7406;&#x5668;&#x5C31;&#x4F1A;&#x6062;&#x590D;&#x4E4B;&#x524D;&#x5B58;&#x50A8;&#x5728;&#x6808;&#x7A7A;&#x95F4;&#x7684;&#x5BC4;&#x5B58;&#x5668;, &#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5F02;&#x5E38;&#x4E4B;&#x524D;&#x7684;&#x7A0B;&#x5E8F;.</li>
+</ul></div></div>
+<!-- -->
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x7684;&#x7406;&#x8BBA;&#x6839;&#x636E;"><i class="fa fa-bullhorn"></i> &#x6DFB;&#x52A0;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x7684;&#x7406;&#x8BBA;&#x6839;&#x636E;</h3></div><div class="panel-body"><ul>
+<li>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x6DFB;&#x52A0;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x76F8;&#x5F53;&#x4E8E;&#x662F;SoC&#x7684;&#x5916;&#x8BBE;, &#x6DFB;&#x52A0;&#x5916;&#x8BBE;&#x5C31;&#x8981;&#x6D89;&#x53CA;&#x5230;Memory Map&#x4E0E;&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x4E86;.</li>
+</ul></div></div>
+<h2 id="memory-map-&#x4E0E;&#x603B;&#x7EBF;&#x6269;&#x5C55;">Memory Map &#x4E0E;&#x603B;&#x7EBF;&#x6269;&#x5C55;</h2>
+<p>&#x672C;&#x5B9E;&#x9A8C;&#x6240;&#x642D;&#x5EFA;&#x7684; SoC &#x7684; memory map &#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;.</p>
+<p><div align="center"><img src="../img/lab3/05.png" alt="01" style="zoom:100%;"></div></p>
+<center style="color:#000000;font-size:10pt;">memory map</center>
+
+<p>&#x5904;&#x7406;&#x5668;&#x6838;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x7F16;&#x7801;&#x8BBF;&#x95EE;&#x5916;&#x8BBE;, &#x6240;&#x6709;&#x7684;&#x5916;&#x8BBE;&#x5728;&#x5904;&#x7406;&#x5668;&#x6838;&#x770B;&#x6765;&#x90FD;&#x662F; memory map &#x4E0A;&#x7684;&#x4E00;&#x5757;&#x8FDE;&#x7EED;&#x533A;&#x57DF;, &#x8BBF;&#x95EE;&#x8FD9;&#x5757;&#x533A;&#x57DF;&#x5C31;&#x662F;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7684;&#x5916;&#x8BBE;. &#x4F8B;&#x5982;&#x4E0A;&#x56FE;&#x4E2D;&#x7684; RAMCODE , &#x5176;&#x5730;&#x5740;&#x7F16;&#x7801;&#x4E3A; 0x00000000-0x0000ffff , &#x90A3;&#x4E48;&#x5904;&#x7406;&#x5668;&#x6838;&#x901A;&#x8FC7; AHB &#x603B;&#x7EBF;&#x53D1;&#x51FA;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x6B21;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x53EA;&#x8981;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x4E0A;&#x7684;&#x503C;&#x5728; 0x00000000-0x0000ffff &#x4E4B;&#x95F4;, &#x90FD;&#x8BA4;&#x4E3A;&#x662F;&#x5904;&#x7406;&#x5668;&#x6838;&#x5728;&#x5411; RAMCODE &#x63D0;&#x51FA;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;.</p>
+<p>&#x90A3;&#x4E48;&#x5728; SoC &#x5177;&#x6709;&#x591A;&#x4E2A;&#x5916;&#x8BBE;, &#x4F46;&#x662F;&#x5904;&#x7406;&#x5668;&#x6838;&#x53EA;&#x6709;&#x4E00;&#x4E2A; Master &#x603B;&#x7EBF;&#x63A5;&#x53E3;&#x7684;&#x60C5;&#x51B5;&#x4E0B;, &#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;, &#x4F7F;&#x5904;&#x7406;&#x5668;&#x6838;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x591A;&#x4E2A;&#x5916;&#x8BBE;, &#x5728; <em>AMBA&#xAE; 3 AHB-Lite Protocol</em> &#x6587;&#x6863;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86; Single Master AHB Interconnect &#x7ED3;&#x6784;, &#x5982;&#x4E0B;&#x56FE;.</p>
+<p><div align="center"><img src="../img/lab3/06.png" alt="01" style="zoom:100%;"></div></p>
+<center style="color:#000000;font-size:10pt;">&#x603B;&#x7EBF;&#x6269;&#x5C55;</center>
+
+<p>&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x4E3B;&#x8981;&#x7531;&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;: Decoder &#x4E0E; Slave MUX .</p>
+<p>Decoder &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5BF9;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x8FDB;&#x884C;&#x8BD1;&#x7801;, &#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x5916;&#x8BBE;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;, &#x540C;&#x6837;&#x4EE5; RAMCODE &#x5916;&#x8BBE;&#x4E3A;&#x4F8B;, &#x7531;&#x4E8E;&#x5176;&#x5730;&#x5740;&#x7F16;&#x7801;&#x4E3A;0x00000000-0x0000ffff , &#x90A3;&#x4E48;&#x53EA;&#x8981;&#x5730;&#x5740;&#x603B;&#x7EBF; HADDR &#x7684;&#x9AD8; 16bit &#x4E3A; 0x0000 &#x65F6;, &#x5730;&#x5740;&#x603B;&#x7EBF;&#x7684;&#x503C;&#x5FC5;&#x5B9A;&#x5904;&#x4E8E; RAMCODE &#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;&#x533A;&#x57DF;&#x4E2D;, &#x5219;&#x5224;&#x5B9A;&#x4E3A;&#x5904;&#x7406;&#x5668;&#x6838;&#x5BF9; RAMCODE &#x63D0;&#x8D77;&#x7684;&#x4E00;&#x6B21;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x56E0;&#x6B64; RAMCODE &#x5BF9;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7; HSEL &#x5C06;&#x4F1A;&#x88AB;&#x7F6E;&#x4F4D;&#x6709;&#x6548;; &#x82E5; HADDR &#x7684;&#x9AD8; 16bit &#x4E0D;&#x4E3A; 0x0000 &#x65F6;(&#x4F8B;&#x5982;0x4000), &#x5730;&#x5740;&#x603B;&#x7EBF;&#x7684;&#x503C;&#x4E0D;&#x5904;&#x4E8E; RAMCODE &#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;&#x533A;&#x57DF;, &#x5219;&#x5224;&#x5B9A;&#x4E3A;&#x4E0D;&#x662F;&#x5BF9; RAMCODE &#x7684;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x56E0;&#x6B64;&#x5BF9;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x88AB;&#x7F6E;&#x4F4D;&#x65E0;&#x6548;. &#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;, &#x6BCF;&#x4E00;&#x4E2A;&#x5916;&#x8BBE;&#x5728; Decoder &#x4E2D;&#x90FD;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5668;&#x7528;&#x4E8E;&#x4EA7;&#x751F;&#x76F8;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;.</p>
+<p><div align="center"><img src="../img/lab3/07.png" alt="01" style="zoom:100%;"></div></p>
+<center style="color:#000000;font-size:10pt;">Decoder &#x5185;&#x90E8;&#x7ED3;&#x6784;</center>
+
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;, &#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x5916;&#x8BBE;, Decoder &#x5229;&#x7528;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x751F;&#x6210;&#x9009;&#x62E9;&#x4FE1;&#x53F7; HSEL &#x6240;&#x9700;&#x8981;&#x7684;&#x5BBD;&#x5EA6;&#x662F;&#x4E0D;&#x540C;&#x7684;. &#x4F8B;&#x5982; RAMCODE &#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;&#x4E3A; 0x00000000-0x0000ffff , &#x5176;&#x6709;&#x6548;&#x957F;&#x5EA6;&#x4E3A; 0x0000-0xffff , &#x90A3;&#x4E48; RAMCODE &#x5BF9;&#x4E8E;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;(HSEL_RAMCODE)&#x9700;&#x8981;&#x5BF9; HADDR &#x7684;&#x9AD8; 16bit &#x8FDB;&#x884C;&#x8BD1;&#x7801;; &#x800C; WaterLight &#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;&#x4E3A; 0x40000000-0x4000000f , &#x5176;&#x6709;&#x6548;&#x957F;&#x5EA6;&#x4E3A; 0x0-0xf , &#x56E0;&#x6B64;WaterLight &#x5BF9;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;(HSEL_WaterLight)&#x9700;&#x8981;&#x5BF9; HADDR &#x7684;&#x9AD8; 28bit &#x8FDB;&#x884C;&#x8BD1;&#x7801;.</p>
+<p>Slave MUX &#x7684;&#x4F5C;&#x7528;&#x5219;&#x662F;&#x901A;&#x8FC7;&#x6BCF;&#x4E2A;&#x5916;&#x8BBE;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;, &#x5BF9;&#x6240;&#x6709;&#x5916;&#x8BBE;&#x8FD4;&#x56DE;&#x7684;&#x8BFB;&#x53D6;&#x6570;&#x636E;(HRDATA) &#x3001;&#x54CD;&#x5E94;&#x4FE1;&#x53F7;(HRESP)&#x4EE5;&#x53CA;&#x53CD;&#x9988;&#x4FE1;&#x53F7;(HREADYOUT)&#x8FDB;&#x884C;&#x9009;&#x62E9;, &#x4FDD;&#x8BC1;&#x8FD4;&#x56DE;&#x7ED9; Master &#x7AEF;&#x53E3;&#x7684;&#x6570;&#x636E;&#x6765;&#x81EA;&#x4E8E;&#x5F53;&#x524D;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x6807;&#x5916;&#x8BBE;. &#x4F8B;&#x5982;&#x5F53;&#x524D;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;&#x662F;&#x8BFB;&#x53D6;RAMCODE &#x7684;&#x6570;&#x636E;, &#x90A3;&#x4E48;&#x6240;&#x6709;&#x5916;&#x8BBE;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x4E2D;&#x53EA;&#x6709; RAMCODE &#x5BF9;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x4E3A; &apos;1&apos; , &#x5176;&#x4ED6;&#x6240;&#x6709;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x4E3A; &apos;0&apos; , &#x90A3;&#x4E48;Slave MUX &#x5219;&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x9009;&#x4E2D; RAMCODE &#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;, &#x4FDD;&#x8BC1;&#x5904;&#x7406;&#x5668;&#x6838;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x8BFB;&#x53D6;.</p>
+<p>&#x6839;&#x636E;&#x4EE5;&#x4E0A;&#x5206;&#x6790;, &#x672C;&#x5B9E;&#x9A8C;&#x5DF2;&#x7ECF;&#x7F16;&#x5199;&#x597D;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x7684;&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;.</p>
+<p><div align="center"><img src="../img/lab3/08.png" alt="01" style="zoom:100%;"></div></p>
+<center style="color:#000000;font-size:10pt;">&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x7ED3;&#x6784;&#x56FE;</center>
+
+<p>&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x8BB2;&#x89E3;&#x4E2D;, &#x6BCF;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5916;&#x8BBE;, &#x53EA;&#x9700;&#x8981;&#x5C06;&#x5916;&#x8BBE; Slave &#x63A5;&#x53E3;&#x4E0E; Peripheral Side AHBlite Master &#x63A5;&#x53E3;&#x76F8;&#x8FDE;&#x63A5;, &#x518D;&#x5728; Dcoder &#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x7684;&#x8BD1;&#x7801;&#x6A21;&#x5757;&#x751F;&#x6210;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x5373;&#x53EF;.</p>
+<h2 id="&#x4FEE;&#x6539;&#x786C;&#x4EF6;&#x4EE3;&#x7801;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;">&#x4FEE;&#x6539;&#x786C;&#x4EF6;&#x4EE3;&#x7801;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;</h2>
+<p>&#x53C2;&#x8003;&#x5B9E;&#x9A8C;&#x4E8C;&#x6DFB;&#x52A0; RAMCODE &#x6B65;&#x9AA4;. &#x5728;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x4E2D;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x597D; RAMDATA &#x603B;&#x7EBF;&#x63A5;&#x53E3;&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684; Block RAM , &#x9700;&#x8981;&#x5C06;RAMDATA &#x603B;&#x7EBF;&#x63A5;&#x53E3;&#x63A5;&#x5165;&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x4E2D;&#x9884;&#x7559;&#x7684; P1 &#x63A5;&#x53E3;.</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;, &#x5728; &quot;AHBlite_Decoder.v&quot; &#x4E2D;&#x7684; RAMDATA (Port 1) &#x7AEF;&#x53E3;&#x53C2;&#x6570;&#x5C06;&#x5176;&#x4F7F;&#x80FD;.</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">/*RAMDATA enable parameter*/</span>
+<span class="hljs-keyword">parameter</span> Port1_en = <span class="hljs-number">0</span>,
+<span class="hljs-comment">/************************/</span>
+</code></pre>
+<p>&#x6539;&#x4E3A;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">/*RAMDATA enable parameter*/</span>
+<span class="hljs-keyword">parameter</span> Port1_en = <span class="hljs-number">1</span>,
+<span class="hljs-comment">/************************/</span>
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x6B65;, &#x6839;&#x636E;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x7AE0;&#x8282;&#x6240;&#x8FF0;&#x7684; memory map &#x63A8;&#x8350;&#x5730;&#x5740;&#x5206;&#x914D;, &#x6211;&#x4EEC;&#x5728;&#x5730;&#x5740; 0x20000000 &#x5206;&#x914D;&#x4E86;&#x4E00;&#x4E2A; 512KB &#x7684;RAMDATA.&#x6240;&#x4EE5; RAMDATA &#x7684;&#x603B;&#x7EBF;&#x7F16;&#x7801;&#x4E3A; 0x20000000-0x2000ffff , &#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;&#x4E00;&#x6B21;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x53EA;&#x8981;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x7684;&#x9AD8; 16 &#x4F4D;&#x4E3A; 0x2000 , &#x5219;Decoder &#x8BA4;&#x4E3A;&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x5BF9;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x7684;&#x64CD;&#x4F5C;, &#x8FDB;&#x800C;&#x751F;&#x6210;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x603B;&#x7EBF;&#x9009;&#x62E9;&#x4FE1;&#x53F7;. &#x5728;&#x8BD1;&#x7801;&#x90E8;&#x5206;&#x63D2;&#x5165; RAMDATA &#x7684;&#x8BD1;&#x7801;&#x5668;&#x4EE3;&#x7801;.</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">//0x20000000-0x2000ffff</span>
+<span class="hljs-comment">/*Insert RAMDATA decoder code there*/</span>
+<span class="hljs-keyword">assign</span> P1_HSEL = <span class="hljs-number">1</span>&#x2019;b0;
+<span class="hljs-comment">/***********************************/</span>
+</code></pre>
+<p>&#x6539;&#x4E3A;</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">//0x20000000-0x2000ffff</span>
+<span class="hljs-comment">/*Insert RAMDATA decoder code there*/</span>
+<span class="hljs-keyword">assign</span> P1_HSEL = (HADDR[<span class="hljs-number">31</span>:<span class="hljs-number">16</span>] == <span class="hljs-number">16</span>&apos;h2000) ? Port1_en : <span class="hljs-number">1&apos;b0</span>;
+<span class="hljs-comment">/***********************************/</span>
+</code></pre>
+<p>&#x7B2C;&#x4E09;&#x6B65;, &#x6211;&#x4EEC;&#x501F;&#x52A9;&#x4E8E; readmemh &#x51FD;&#x6570;, &#x5C06;keil&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x673A;&#x5668;&#x7801;, &#x521D;&#x59CB;&#x5316;&#x5230;&#x7A0B;&#x5E8F;RAM&#x4E2D;. &#x5373;&#x5728; &quot;Block_RAM.v&quot; &#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x6539;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;, &#x4F7F;&#x5F97;&#x7F16;&#x8BD1;&#x5668;&#x80FD;&#x591F;&#x627E;&#x5230; code.hex &#x6587;&#x4EF6;.</p>
+<p>&#x81F3;&#x6B64;, &#x6211;&#x4EEC;&#x5C31;&#x5B8C;&#x6210;&#x4E86; RAMDATA &#x90E8;&#x5206;&#x7684;&#x4FEE;&#x6539;.</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By UESTC Intelligent Chip and System Design Lab. &#x91C7;&#x7528;<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 3.0 &#x4E2D;&#x56FD;&#x5927;&#x9646; &#x8BB8;&#x53EF;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E; 2022-05-20 19:03:02 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page: LAB3: "灯, 等灯, 等灯"-流水灯的几种点法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="GPIO.html" class="navigation navigation-next " aria-label="Next page: GPIO外设实现流水灯">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据存储器","level":"1.5.1","depth":2,"next":{"title":"GPIO外设实现流水灯","level":"1.5.2","depth":2,"path":"lab3/GPIO.md","ref":"lab3/GPIO.md","articles":[]},"previous":{"title":"LAB3: \"灯, 等灯, 等灯\"-流水灯的几种点法","level":"1.5","depth":1,"path":"lab3/introduction.md","ref":"lab3/introduction.md","articles":[{"title":"数据存储器","level":"1.5.1","depth":2,"path":"lab3/data_storage.md","ref":"lab3/data_storage.md","articles":[]},{"title":"GPIO外设实现流水灯","level":"1.5.2","depth":2,"path":"lab3/GPIO.md","ref":"lab3/GPIO.md","articles":[]},{"title":"硬件流水灯","level":"1.5.3","depth":2,"path":"lab3/WaterLight.md","ref":"lab3/WaterLight.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["intopic-toc","callouts","page-footer-ex","-livereload","theme-comscore","-sharing","livereload"],"styles":{"website":"styles/styles.css"},"pluginsConfig":{"callouts":{"important":{"alert":"danger","picto":"fa-bullhorn"},"danger":{"alert":"danger","picto":"fa-exclamation-circle"},"question":{"alert":"info","picto":"fa-question-circle"},"hint":{"alert":"success","picto":"fa-lightbulb-o"},"showTypeInHeader":false,"must":{"alert":"warning","picto":"fa-edit"},"flag":{"alert":"success","picto":"fa-flag"},"info":{"alert":"info","picto":"fa-info-circle"},"note":{"alert":"info","picto":"fa-edit"},"fread":{"alert":"info","picto":"fa-comment"}},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"导航","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","visible":true},"page-footer-ex":{"copyright":"By UESTC Intelligent Chip and System Design Lab. 采用[知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WQ GitBook","gitbook":"*"},"file":{"path":"lab3/data_storage.md","mtime":"2022-05-20T11:03:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-31T13:35:53.361Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

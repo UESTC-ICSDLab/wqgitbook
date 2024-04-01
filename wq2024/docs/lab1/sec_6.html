@@ -1,0 +1,882 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>自己动手, 理解函数调用 · WQ GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../lab2/introduction.html" />
+    
+    
+    <link rel="prev" href="sec_5.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../lab0/introduction.html">
+            
+                <a href="../lab0/introduction.html">
+            
+                    
+                    LAB0: 工欲善其事 必先利其器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../lab0/FPGAintro.html">
+            
+                <a href="../lab0/FPGAintro.html">
+            
+                    
+                    FPGA 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../lab0/whyFPGA.html">
+            
+                <a href="../lab0/whyFPGA.html">
+            
+                    
+                    为什么是 FPGA？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../lab0/design_method.html">
+            
+                <a href="../lab0/design_method.html">
+            
+                    
+                    设计方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../lab0/board_intro.html">
+            
+                <a href="../lab0/board_intro.html">
+            
+                    
+                    平台介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../lab0/intro_tools.html">
+            
+                <a href="../lab0/intro_tools.html">
+            
+                    
+                    软硬件关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../lab0/keil.html">
+            
+                <a href="../lab0/keil.html">
+            
+                    
+                    Keil
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../lab0/td.html">
+            
+                <a href="../lab0/td.html">
+            
+                    
+                    TD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../lab0/modelsim.html">
+            
+                <a href="../lab0/modelsim.html">
+            
+                    
+                    Modelsim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    LAB1: "施法"让 CPU 动起来
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="sec_1.html">
+            
+                <a href="sec_1.html">
+            
+                    
+                    ARM 汇编回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="sec_2.html">
+            
+                <a href="sec_2.html">
+            
+                    
+                    搭建 Keil 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="sec_3.html">
+            
+                <a href="sec_3.html">
+            
+                    
+                    运行吧, 第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="sec_5.html">
+            
+                <a href="sec_5.html">
+            
+                    
+                    栈 - 函数调用的指挥官
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="sec_6.html">
+            
+                <a href="sec_6.html">
+            
+                    
+                    自己动手, 理解函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../lab2/introduction.html">
+            
+                <a href="../lab2/introduction.html">
+            
+                    
+                    LAB2: "点石成金" - 实现你的首个 SoC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../lab2/sec_1.html">
+            
+                <a href="../lab2/sec_1.html">
+            
+                    
+                    硬件部分说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../lab2/sec_2.html">
+            
+                <a href="../lab2/sec_2.html">
+            
+                    
+                    搭建 Keil 工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../lab2/sec_3.html">
+            
+                <a href="../lab2/sec_3.html">
+            
+                    
+                    Modelsim 仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../lab2/sec_4.html">
+            
+                <a href="../lab2/sec_4.html">
+            
+                    
+                    下载比特流到 FPGA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../lab2/sec_5.html">
+            
+                <a href="../lab2/sec_5.html">
+            
+                    
+                    将硬件固化到开发板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../lab2/sec_6.html">
+            
+                <a href="../lab2/sec_6.html">
+            
+                    
+                    使用 Keil 调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../lab3/introduction.html">
+            
+                <a href="../lab3/introduction.html">
+            
+                    
+                    LAB3: "灯, 等灯, 等灯"-流水灯的几种点法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../lab3/data_storage.html">
+            
+                <a href="../lab3/data_storage.html">
+            
+                    
+                    数据存储器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../lab3/GPIO.html">
+            
+                <a href="../lab3/GPIO.html">
+            
+                    
+                    GPIO外设实现流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../lab3/WaterLight.html">
+            
+                <a href="../lab3/WaterLight.html">
+            
+                    
+                    硬件流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lab4/introduction.html">
+            
+                <a href="../lab4/introduction.html">
+            
+                    
+                    LAB4: 如何召唤"沉睡的软件"
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../lab4/keyboards.html">
+            
+                <a href="../lab4/keyboards.html">
+            
+                    
+                    矩阵键盘原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../lab4/keyboards_waterlight.html">
+            
+                <a href="../lab4/keyboards_waterlight.html">
+            
+                    
+                    使用矩阵键盘4个按键控制流水灯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../lab4/keyboards_led.html">
+            
+                <a href="../lab4/keyboards_led.html">
+            
+                    
+                    使用矩阵键盘控制数码管显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../verilog/introduction.html">
+            
+                <a href="../verilog/introduction.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../verilog/grammar.html">
+            
+                <a href="../verilog/grammar.html">
+            
+                    
+                    Verilog基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../verilog/enable_signal.html">
+            
+                <a href="../verilog/enable_signal.html">
+            
+                    
+                    使能信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../verilog/decoder.html">
+            
+                <a href="../verilog/decoder.html">
+            
+                    
+                    总线译码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq/introduction.html">
+            
+                <a href="../faq/introduction.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../add_notice.html">
+            
+                <a href="../add_notice.html">
+            
+                    
+                    补充通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../about/introduction.html">
+            
+                <a href="../about/introduction.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >自己动手, 理解函数调用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x81EA;&#x5DF1;&#x52A8;&#x624B;-&#x7406;&#x89E3;&#x51FD;&#x6570;&#x8C03;&#x7528;">&#x81EA;&#x5DF1;&#x52A8;&#x624B;, &#x7406;&#x89E3;&#x51FD;&#x6570;&#x8C03;&#x7528;</h1>
+<p>&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x539F;&#x5219;&#x4E0A;&#x4E0D;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x6808;&#x8FDB;&#x884C;&#x76F8;&#x4E92;&#x8C03;&#x7528;, &#x800C; c &#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x57FA;&#x4E8E;&#x6808;&#x7684;&#x76F8;&#x4E92;&#x8C03;&#x7528;&#x5728;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x5904;&#x7406;&#x4E0B;&#x662F;&#x5BF9;&#x7F16;&#x7A0B;&#x8005;&#x5C4F;&#x853D;&#x7684;, &#x6240;&#x4EE5;, &#x8981;&#x52A8;&#x624B;&#x7406;&#x89E3; ARM &#x7A0B;&#x5E8F;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;, &#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;&#x662F;&#x8FDB;&#x884C; c &#x7A0B;&#x5E8F;&#x4E0E;&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;&#x7684;&#x76F8;&#x4E92;&#x8C03;&#x7528;.</p>
+<h2 id="c-&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;">c &#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;</h2>
+<p>&#x5728; c &#x7A0B;&#x5E8F;&#x7684; main &#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x4E00;&#x6BB5;&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;, &#x5B9E;&#x73B0;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x590D;&#x5236;.</p>
+<p>&#x9996;&#x5148;, &#x5728;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684; Keil &#x5DE5;&#x7A0B;&#x7684;&#x57FA;&#x7840;&#x4E0A;, &#x79FB;&#x9664; Target &#x4E2D;&#x7684;&#x6240;&#x6709;&#x6E90;&#x6587;&#x4EF6;.</p>
+<center><img src="../img/lab1/02-27.png" alt="02-27" style="zoom:75%;"></center><center style="color:#0" ;="">&#x79FB;&#x9664;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;</center> 
+
+<p>&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5939; &quot;./Task1/call&quot;, &#x53D1;&#x73B0;&#x8FD9;&#x91CC;&#x5DF2;&#x7ECF;&#x4E3A;&#x4F60;&#x51C6;&#x5907;&#x597D;&#x4E86;&#x672C;&#x5B9E;&#x9A8C;&#x9700;&#x8981;&#x7684;&#x542F;&#x52A8;&#x6587;&#x4EF6;, &#x76F4;&#x63A5;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x81F3;&#x5DE5;&#x7A0B; Target &#x4E2D;&#x5373;&#x53EF;. &#x6253;&#x5F00;&#x542F;&#x52A8;&#x6587;&#x4EF6;, <font color="red">&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x91CC;&#x591A;&#x4E86;&#x51E0;&#x884C;&#x7528;&#x4E8E;&#x6808;&#x521D;&#x59CB;&#x5316;&#x7684;&#x4EE3;&#x7801; (&#x8BB0;&#x4F4F;&#x8FD9;&#x53E5;&#x8BDD;, &#x5F85;&#x4F1A;&#x8981;&#x8003;).</font></p>
+<p>&#x7136;&#x540E;&#x5728; &quot;./Task1/call&quot; &#x4E2D;&#x65B0;&#x5EFA;&#x6587;&#x4EF6; &quot;main.c&quot; &#x548C; &quot;strcopy.s&quot; &#x5E76;&#x6DFB;&#x52A0;&#x81F3;&#x5DE5;&#x7A0B; Target &#x4E2D;. </p>
+<p>&#x5728; &quot;main.c&quot; &#x4E2D;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;:</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdint.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">void</span> <span class="hljs-title">strcopy</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *d, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> srcstr[] = <span class="hljs-string">&quot;First string - soure&quot;</span>;         <span class="hljs-comment">/* &#x5B9A;&#x4E49;&#x6E90;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x5E76;&#x521D;&#x59CB;&#x5316; */</span>
+    <span class="hljs-keyword">char</span> dststr[] = <span class="hljs-string">&quot;Second string - destination&quot;</span>;  <span class="hljs-comment">/* &#x5B9A;&#x4E49;&#x76EE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x5E76;&#x521D;&#x59CB;&#x5316; */</span>
+    strcopy(dststr,srcstr);                         <span class="hljs-comment">/* &#x8C03;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x590D;&#x5236;&#x6C47;&#x7F16;&#x51FD;&#x6570; */</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x5728; &quot;strcopy.s&quot; &#x4E2D;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;:</p>
+<pre><code class="lang-armasm">            <span class="hljs-meta">AREA</span> SCopy, <span class="hljs-meta">CODE</span>, <span class="hljs-meta">READONLY</span>
+            <span class="hljs-meta">EXPORT</span>  <span class="hljs-keyword">strcopy
+</span><span class="hljs-keyword">strcopy
+</span>            <span class="hljs-keyword">LDRB </span>    <span class="hljs-built_in">r2</span>,     [<span class="hljs-built_in">r1</span>]    <span class="hljs-comment">; r1&#x5BF9;&#x5E94;&#x6E90;&#x5B57;&#x7B26;&#x4E32;&#x9996;&#x5730;&#x5740;&#xFF0C;&#x5229;&#x7528;&#x5BC4;&#x5B58;&#x5668;&#x95F4;&#x63A5;&#x5BFB;&#x5740;&#x8BFB;&#x53D6;&#x5B57;&#x7B26;</span>
+            <span class="hljs-keyword">ADDS </span>    <span class="hljs-built_in">r1</span>,     <span class="hljs-number">#1</span>
+            <span class="hljs-keyword">STRB </span>    <span class="hljs-built_in">r2</span>,     [<span class="hljs-built_in">r0</span>]    <span class="hljs-comment">; r0&#x5BF9;&#x5E94;&#x76EE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9996;&#x5730;&#x5740;&#xFF0C;&#x5229;&#x7528;&#x5BC4;&#x5B58;&#x5668;&#x95F4;&#x63A5;&#x5BFB;&#x5740;&#x4FDD;&#x5B58;&#x5B57;&#x7B26;</span>
+            <span class="hljs-keyword">ADDS </span>    <span class="hljs-built_in">r0</span>,     <span class="hljs-number">#1</span>
+            <span class="hljs-keyword">CMP </span>     <span class="hljs-built_in">r2</span>,     <span class="hljs-number">#0</span>      <span class="hljs-comment">; &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x7ED3;&#x675F;</span>
+            <span class="hljs-keyword">BNE </span>     <span class="hljs-keyword">strcopy </span>        <span class="hljs-comment">; &#x5FAA;&#x73AF;&#x6267;&#x884C;&#x5B57;&#x7B26;&#x590D;&#x5236;&#xFF0C;&#x76F4;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x7ED3;&#x675F;</span>
+            <span class="hljs-keyword">BX </span>      <span class="hljs-built_in">lr</span>              <span class="hljs-comment">; &#x6C47;&#x7F16;&#x5B50;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;</span>
+            <span class="hljs-meta">END</span>
+</code></pre>
+<p>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x540E;, &#x8FDB;&#x884C;&#x7F16;&#x8BD1; (Build).</p>
+<!-- -->
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="what-&#x6211;&#x7F16;&#x8BD1;&#x5931;&#x8D25;&#x4E86;"><i class="fa fa-bullhorn"></i> What? &#x6211;&#x7F16;&#x8BD1;&#x5931;&#x8D25;&#x4E86;</h3></div><div class="panel-body"><ol>
+<li>&#x6839;&#x636E;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;.</li>
+<li>&#x5C1D;&#x8BD5;&#x5728; Optiins for Target -&gt; Target &#x53F3;&#x4FA7;&#x83DC;&#x5355;&#x7684; ARM Compiler &#x5904;&#x9009;&#x62E9; V5 &#x7248;&#x672C;&#x7684;&#x7F16;&#x8BD1;&#x5668;. </li>
+<li>&#x5C1D;&#x8BD5;&#x5728; Optiins for Target -&gt; Linker &#x91CC;&#x53D6;&#x6D88;&#x52FE;&#x9009; Don&apos;t Search Standard Libraries.</li>
+</ol></div></div>
+<p>&#x7F16;&#x8BD1;&#x6210;&#x529F;&#x540E;, &#x8FD0;&#x884C;&#x4EFF;&#x771F;&#x8C03;&#x8BD5;.</p>
+<p>&#x522B;&#x614C;, &#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x6765;. &#x8BF7;&#x4E00;&#x8FB9;&#x5355;&#x6B65;&#x8FD0;&#x884C;, &#x4E00;&#x904D;&#x89C2;&#x5BDF;&#x6E90;&#x4EE3;&#x7801;&#x7A97;&#x53E3;&#x4E2D;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x60C5;&#x51B5;, &#x5F53;&#x7A0B;&#x5E8F;&#x8FDB;&#x5165; strcopy &#x7A0B;&#x5E8F;&#x540E;, &#x89C2;&#x5BDF;&#x5BC4;&#x5B58;&#x5668;&#x7A97;&#x53E3;&#x4E2D; r0 &#x548C; r1 &#x7684;&#x503C;, &#x6B64;&#x65F6;&#x7684; r0 &#x4FBF;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x62F7;&#x8D1D;&#x7684;&#x76EE;&#x7684;&#x5730;&#x5740;, r1 &#x662F;&#x5B57;&#x7B26;&#x4E32;&#x62F7;&#x8D1D;&#x7684;&#x6E90;&#x5730;&#x5740;. </p>
+<center><img src="../img/lab1/02-20.png" alt="02-20" style="zoom:80%;"></center><center style="color:#0" ;="">&#x5BC4;&#x5B58;&#x5668;&#x7A97;&#x53E3;</center> 
+
+<p>&#x4E3A;&#x4E86;&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x66F4;&#x76F4;&#x89C2;&#x5730;&#x89C2;&#x5BDF;&#x5B57;&#x7B26;&#x4E32;&#x62F7;&#x8D1D;&#x7684;&#x8FC7;&#x7A0B;, &#x5C06;&#x5F53;&#x524D; r0 &#x7684;&#x503C;&#x62F7;&#x8D1D;&#x5230;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x7684; Memory &#x7A97;&#x53E3;&#x4E2D;, &#x8FD9;&#x65F6;&#x4FBF;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x5730;&#x5740;&#x5468;&#x56F4;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;.</p>
+<center><img src="../img/lab1/02-21.png" alt="02-21" style="zoom:100%;"></center><center style="color:#0" ;="">Memory &#x7A97;&#x53E3;</center> 
+
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x5185;&#x5B58;&#x6620;&#x5C04;-debug-&#x7684;&#x5229;&#x5668;"><i class="fa fa-question-circle"></i> &#x5185;&#x5B58;&#x6620;&#x5C04;, Debug &#x7684;&#x5229;&#x5668;</h3></div><div class="panel-body"><p>Memory &#x7A97;&#x53E3;&#x7684;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x529F;&#x80FD;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x53BB;&#x67E5;&#x770B;&#x4EFB;&#x610F;&#x5730;&#x5740;&#x5904;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;, &#x8FD9;&#x91CC;&#x7684;&#x5185;&#x5B58;&#x662F;&#x62BD;&#x8C61;&#x7684;&#x5185;&#x5B58;, &#x56E0;&#x4E3A; ARM &#x67B6;&#x6784;&#x91C7;&#x7528;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&#x65B9;&#x5F0F;, &#x6240;&#x6709;&#x7684;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x5916;&#x8BBE;&#x7A7A;&#x95F4;&#x5171;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x5730;&#x5740;, &#x8FD9;&#x610F;&#x5473;&#x7740;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x6620;&#x5C04;, Flash, ROM, &#x5916;&#x8BBE;&#x5BC4;&#x5B58;&#x5668;&#x7B49;&#x6240;&#x6709;&#x7684;&#x4E00;&#x5207;&#x90FD;&#x80FD;&#x591F;&#x5C3D;&#x6536;&#x773C;&#x5E95;. &#x5B83;&#x7684;&#x4F5C;&#x7528;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#x5728;&#x7EBF;&#x4EFF;&#x771F;, &#x5728;&#x57FA;&#x4E8E;&#x8C03;&#x8BD5;&#x5668;&#x7684;&#x5B9E;&#x9645;&#x8C03;&#x8BD5;&#x4E2D;&#x540C;&#x6837;&#x80FD;&#x591F;&#x53D1;&#x6325;&#x4F5C;&#x7528;.</p><p>&#x5982;&#x679C; Memory &#x7A97;&#x53E3;&#x4E0D;&#x5C0F;&#x5FC3;&#x88AB;&#x5173;&#x95ED;, &#x53EF;&#x4EE5;&#x4ECE;&#x83DC;&#x5355;&#x680F; -&gt; View -&gt; Memory Windows &#x6253;&#x5F00;.</p></div></div>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x91C7;&#x7528; ASCII &#x6807;&#x51C6;&#x7F16;&#x7801;&#x7684;, &#x6240;&#x4EE5;&#x9700;&#x8981;&#x53F3;&#x952E; Memory &#x533A;&#x57DF;&#x9009;&#x62E9; Ascii, &#x8FD9;&#x6837;&#x6570;&#x636E;&#x5C31;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F62;&#x5F0F;&#x5448;&#x73B0;&#x51FA;&#x6765;&#x4E86;.</p>
+<center><img src="../img/lab1/02-22.png" alt="02-22" style="zoom:80%;"></center><center style="color:#0" ;="">&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x7801; Memory &#x7A97;&#x53E3;&#x5185;&#x5BB9;</center> 
+
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;, &#x6211;&#x4EEC;&#x5728; &quot;main.c&quot; &#x4E2D;&#x5B9A;&#x4E49;&#x7684; dststr &#x51FA;&#x73B0;&#x5728;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5904;, &#x8FD9;&#x65F6;, &#x4F60;&#x53EF;&#x4EE5;&#x5355;&#x6B65;&#x8FD0;&#x884C;, &#x89C2;&#x5BDF; dststr &#x4E00;&#x6B65;&#x6B65;&#x88AB; srcstr &#x62F7;&#x8D1D;&#x8986;&#x76D6;&#x7684;&#x8FC7;&#x7A0B;, &#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;<img src="../img/lab1/02-23.png" alt="02-23" style="zoom:100%;">&#x76F4;&#x63A5;&#x8FD0;&#x884C;, &#x89C2;&#x5BDF;&#x5B57;&#x7B26;&#x4E32;&#x62F7;&#x8D1D;&#x7684;&#x6700;&#x7EC8;&#x7ED3;&#x679C;.</p>
+<center><img src="../img/lab1/02-24.png" alt="02-24" style="zoom:80%;"></center><center style="color:#0" ;="">&#x6700;&#x7EC8;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</center> 
+
+<!-- -->
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="&#x601D;&#x8003;"><i class="fa fa-bullhorn"></i> &#x601D;&#x8003;</h3></div><div class="panel-body"><p>&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x4E2D;&#x662F;&#x600E;&#x6837;&#x8FDB;&#x884C;&#x6808;&#x521D;&#x59CB;&#x5316;&#x7684;? &#x6211;&#x4EEC;&#x77E5;&#x9053; RAM &#x7684;&#x8D77;&#x59CB;&#x5730;&#x5740;&#x662F; 0x20000000, &#x5728;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x91CC;&#x6211;&#x4EEC;&#x5206;&#x914D;&#x4E86; 0x400 &#x4E2A;&#x5B57;&#x8282;&#x7684;&#x6808;&#x7A7A;&#x95F4;, &#x7136;&#x540E;&#x5C06;&#x6808;&#x9876;&#x5730;&#x5740; __initial_sp &#x4F20;&#x7ED9;&#x4E2D;&#x65AD;&#x5411;&#x91CF;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8868;&#x9879;, &#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x521D;&#x59CB;&#x7684; SP &#x503C;&#x5B58;&#x50A8;&#x5728; 0x00000000 &#x5730;&#x5740;&#x5904;, &#x4EE5;&#x4FBF;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x65F6;&#x5C06;&#x5176;&#x8BFB;&#x5165; R13 &#x4E2D;.</p><pre><code class="lang-armasm"><span class="hljs-symbol">Stack_Size</span>      <span class="hljs-meta">EQU</span>     <span class="hljs-number">0x00000400</span>
+                <span class="hljs-meta">AREA</span>    STACK, NOINIT, READWRITE, <span class="hljs-meta">ALIGN</span><span class="hljs-number">=4</span>
+<span class="hljs-symbol">Stack_Mem</span>       <span class="hljs-meta">SPACE</span>   Stack_Size
+<span class="hljs-symbol">__initial_sp</span>
+
+                <span class="hljs-meta">AREA</span>    RESET, <span class="hljs-meta">DATA</span>, <span class="hljs-meta">READONLY</span>
+                <span class="hljs-meta">EXPORT</span>  __Vectors
+<span class="hljs-symbol">__Vectors</span>       <span class="hljs-meta">DCD</span>     __initial_sp              <span class="hljs-comment">; Top of Stack</span>
+</code></pre><p>&#x5728;&#x672C;&#x5B9E;&#x9A8C;&#x4E2D;, main &#x51FD;&#x6570;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x88AB;&#x5B58;&#x653E;&#x5728;&#x6808;&#x91CC;. &#x53E6;&#x5916;, &#x6CE8;&#x610F;&#x6211;&#x4EEC;&#x5728; main &#x51FD;&#x6570;&#x4E2D; strcopy &#x51FD;&#x6570;&#x7684;&#x58F0;&#x660E;&#x65B9;&#x5F0F;:</p><pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">void</span> <span class="hljs-title">strcopy</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *d, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span></span>;
+</code></pre><font color="blue">*d &#x548C; *s &#x662F;&#x4E24;&#x4E2A; 32 &#x4F4D;&#x5730;&#x5740;&#x53C2;&#x6570;, &#x6240;&#x4EE5;&#x6839;&#x636E; ATPCS &#x6807;&#x51C6;, &#x5728;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x524D;, &#x7A0B;&#x5E8F;&#x4F1A;&#x628A;&#x4E8B;&#x5148;&#x628A;&#x51C6;&#x5907;&#x597D;&#x7684;&#x5B9E;&#x53C2;&#x653E;&#x5728; r0 &#x548C; r1 &#x4E2D;, &#x8FD9;&#x662F;&#x7A0B;&#x5E8F;&#x6210;&#x529F;&#x5B9E;&#x73B0;&#x4F20;&#x53C2;&#x7684;&#x5173;&#x952E;. &#x6CE8;&#x610F; strcopy &#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6761;&#x6307;&#x4EE4; BX lr, &#x5B83;&#x80FD;&#x591F;&#x6307;&#x5BFC;&#x8BE5;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE; main &#x51FD;&#x6570;, &#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5728; main &#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528; strcopy &#x65F6;, &#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6761; BL &#x8DF3;&#x8F6C;&#x6307;&#x4EE4;, &#x8DF3;&#x8F6C;&#x5230; strcopy &#x7684;&#x540C;&#x65F6;&#x4F1A;&#x628A;&#x8FD4;&#x56DE;&#x5730;&#x5740;&#x4FDD;&#x5B58;&#x5728; lr &#x4E2D;.</font></div></div>
+<h2 id="&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;c&#x7A0B;&#x5E8F;">&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;c&#x7A0B;&#x5E8F;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x5B9E;&#x9A8C;&#x4E2D;, &#x6211;&#x4EEC;&#x5C06;&#x8FDB;&#x884C;&#x4E00;&#x4E2A; &quot;c&#x8C03;&#x7528;&#x6C47;&#x7F16;, &#x6C47;&#x7F16;&#x518D;&#x8C03;&#x7528;c&quot; &#x7684;&#x4E24;&#x5C42;&#x5D4C;&#x5957;, &#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#x529F;&#x80FD;: i+2i+3i+4i.
+&#x5C06; &quot;main.c&quot; &#x7684;&#x5185;&#x5BB9;&#x66F4;&#x6539;&#x4E3A;:</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdint.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    f();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/*a+b+c+d+e*/</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">g</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b, <span class="hljs-keyword">int</span> c, <span class="hljs-keyword">int</span> d)</span>
+</span>{
+    <span class="hljs-keyword">return</span> a + b + c + d;
+}
+</code></pre>
+<p>&#x5728; &quot;./Task1/call&quot; &#x4E2D;&#x521B;&#x5EFA;&#x6C47;&#x7F16;&#x6587;&#x4EF6; &quot;f.s&quot; &#x5E76;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;:</p>
+<pre><code class="lang-armasm">        <span class="hljs-meta">EXPORT</span> f
+        <span class="hljs-meta">PRESERVE8</span>
+        <span class="hljs-meta">AREA</span> f,<span class="hljs-meta">CODE</span>,<span class="hljs-meta">READONLY</span>
+        <span class="hljs-meta">ENTRY</span>                        
+        <span class="hljs-meta">IMPORT</span> g                 <span class="hljs-comment">; &#x58F0;&#x660E;g&#x4E3A;&#x5916;&#x90E8;&#x5F15;&#x7528;&#x7B26;&#x53F7;</span>
+        <span class="hljs-keyword">PUSH </span>  {<span class="hljs-built_in">lr</span>}
+        <span class="hljs-keyword">MOVS </span>  <span class="hljs-built_in">r0</span>, <span class="hljs-number">#2</span>            <span class="hljs-comment">; i=2</span>
+        <span class="hljs-keyword">ADDS </span>  <span class="hljs-built_in">r1</span>, <span class="hljs-built_in">r0</span>, <span class="hljs-built_in">r0</span>        <span class="hljs-comment">; (R1)=i*2</span>
+        <span class="hljs-keyword">ADDS </span>  <span class="hljs-built_in">r2</span>, <span class="hljs-built_in">r1</span>, <span class="hljs-built_in">r0</span>        <span class="hljs-comment">; (R2)=i*3</span>
+        <span class="hljs-keyword">ADDS </span>  <span class="hljs-built_in">r3</span>, <span class="hljs-built_in">r1</span>, <span class="hljs-built_in">r1</span>        <span class="hljs-comment">; (R3)=i*4</span>
+        <span class="hljs-keyword">BL </span>    g                 <span class="hljs-comment">; &#x8C03;&#x7528;C&#x51FD;&#x6570;g()&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x5728;R0&#x4E2D;</span>
+        <span class="hljs-keyword">POP </span>   {<span class="hljs-built_in">pc</span>}
+</code></pre>
+<p>&#x4FDD;&#x6301;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x4E0D;&#x53D8;, &#x786E;&#x4FDD;&#x66F4;&#x6539;&#x540E;&#x7684; &quot;main.c&quot; &#x548C; &quot;f.s&quot; &#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x81F3; Target, &#x7F16;&#x8BD1;&#x5E76;&#x4EFF;&#x771F;&#x8C03;&#x8BD5;.
+&#x4ECD;&#x7136;&#x5355;&#x6B65;&#x8FD0;&#x884C;, &#x89C2;&#x5BDF;&#x7A0B;&#x5E8F;&#x4E00;&#x6B65;&#x6B65;&#x4ECE; main &#x51FD;&#x6570;&#x8FDB;&#x5165; f &#x7A0B;&#x5E8F;, &#x5728; f &#x7A0B;&#x5E8F;&#x4E2D;, <font color="blue">&#x6839;&#x636E; ATPCS &#x6807;&#x51C6;, &#x6211;&#x4EEC;&#x8981;&#x5C06; g &#x51FD;&#x6570;&#x9700;&#x8981;&#x7684;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x4E00;&#x4E00;&#x51C6;&#x5907;&#x597D;, &#x5206;&#x522B;&#x653E;&#x5728; r0-r3 &#x4E2D;.</font> &#x5355;&#x6B65;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;, &#x76F4;&#x5230;&#x7A0B;&#x5E8F;&#x8FDB;&#x5165; g &#x51FD;&#x6570;&#x4E4B;&#x524D;, &#x6211;&#x4EEC;&#x4F1A;&#x770B;&#x5230;&#x53C2;&#x6570; 2, 4, 6, 8 &#x5DF2;&#x7ECF;&#x88AB;&#x5B58;&#x653E;&#x5230;&#x4E86; r0-r3 &#x4E2D;:</p>
+<center><img src="../img/lab1/02-25.png" alt="02-25" style="zoom:100%;"></center><center style="color:#0" ;="">&#x5728;&#x8FDB;&#x5165; g &#x51FD;&#x6570;&#x4E4B;&#x524D;, r0-r3 &#x4E2D;&#x5DF2;&#x7ECF;&#x5907;&#x597D;&#x4E86;&#x56DB;&#x4E2A;&#x53C2;&#x6570;</center> 
+
+<p>&#x7EE7;&#x7EED;&#x5355;&#x6B65;&#x8FD0;&#x884C;, &#x76F4;&#x5230;&#x8FD0;&#x884C;&#x5230; g &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;, &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BA1;&#x7B97;&#x7ED3;&#x679C; 2+4+6+8=20=14H &#x88AB;&#x5B58;&#x653E;&#x5230;&#x4E86; r0 &#x4E2D;, <font color="blue">&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6839;&#x636E; ATPCS &#x6807;&#x51C6;, &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E94;&#x8BE5;&#x5B58;&#x653E;&#x5230; r0 &#x4E2D;.</font></p>
+<center><img src="../img/lab1/02-26.png" alt="02-26" style="zoom:100%;"></center><center style="color:#0" ;="">&#x5728; g &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;, &#x5176;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x5DF2;&#x7ECF;&#x88AB;&#x5B58;&#x653E;&#x5230;&#x4E86; r0 &#x4E2D;</center> 
+
+<p>&#x7EE7;&#x7EED;&#x5355;&#x6B65;&#x8FD0;&#x884C;, &#x89C2;&#x5BDF;&#x7A0B;&#x5E8F;&#x4E00;&#x6B65;&#x6B65;&#x4ECE; g &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x81F3; f &#x7A0B;&#x5E8F;, &#x6700;&#x540E;&#x8FD4;&#x56DE;&#x81F3; main &#x51FD;&#x6570;&#x4E2D;.</p>
+<!-- -->
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="&#x601D;&#x8003;"><i class="fa fa-bullhorn"></i> &#x601D;&#x8003;</h3></div><div class="panel-body"><ol>
+<li>&#x8BF7;&#x601D;&#x8003;, &quot;f.s&quot; &#x4E2D;&#x7684; PUSH &#x548C; POP &#x6307;&#x4EE4;&#x6709;&#x4EC0;&#x4E48;&#x4F5C;&#x7528;&#x5462;? &#x5982;&#x679C;&#x53BB;&#x6389;&#x8FD9;&#x4E24;&#x6761;&#x6307;&#x4EE4;, &#x7A0B;&#x5E8F;&#x8FD8;&#x80FD;&#x987A;&#x5229;&#x8FD4;&#x56DE;&#x5230; main &#x51FD;&#x6570;&#x4E2D;&#x5417;?</li>
+<li>&#x5176;&#x5B9E;, ARM &#x67B6;&#x6784;&#x4E2D;&#x7684;&#x4FDD;&#x62A4;&#x73B0;&#x573A;&#x4E0D;&#x4EC5;&#x4FDD;&#x62A4;&#x4E86;&#x901A;&#x7528;&#x5BC4;&#x5B58;&#x5668;, &#x6709;&#x65F6;&#x8FD8;&#x9700;&#x8981;&#x4FDD;&#x62A4; lr. &#x90A3;&#x4E48;&#x8BF7;&#x601D;&#x8003;, &#x7A76;&#x7ADF;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4FDD;&#x62A4; lr, &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x5462;? </li>
+</ol></div></div>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By UESTC Intelligent Chip and System Design Lab. &#x91C7;&#x7528;<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 3.0 &#x4E2D;&#x56FD;&#x5927;&#x9646; &#x8BB8;&#x53EF;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E; 2022-05-20 19:03:02 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sec_5.html" class="navigation navigation-prev " aria-label="Previous page: 栈 - 函数调用的指挥官">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../lab2/introduction.html" class="navigation navigation-next " aria-label="Next page: LAB2: "点石成金" - 实现你的首个 SoC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"自己动手, 理解函数调用","level":"1.3.5","depth":2,"next":{"title":"LAB2: \"点石成金\" - 实现你的首个 SoC","level":"1.4","depth":1,"path":"lab2/introduction.md","ref":"lab2/introduction.md","articles":[{"title":"硬件部分说明","level":"1.4.1","depth":2,"path":"lab2/sec_1.md","ref":"lab2/sec_1.md","articles":[]},{"title":"搭建 Keil 工程","level":"1.4.2","depth":2,"path":"lab2/sec_2.md","ref":"lab2/sec_2.md","articles":[]},{"title":"Modelsim 仿真","level":"1.4.3","depth":2,"path":"lab2/sec_3.md","ref":"lab2/sec_3.md","articles":[]},{"title":"下载比特流到 FPGA","level":"1.4.4","depth":2,"path":"lab2/sec_4.md","ref":"lab2/sec_4.md","articles":[]},{"title":"将硬件固化到开发板","level":"1.4.5","depth":2,"path":"lab2/sec_5.md","ref":"lab2/sec_5.md","articles":[]},{"title":"使用 Keil 调试","level":"1.4.6","depth":2,"path":"lab2/sec_6.md","ref":"lab2/sec_6.md","articles":[]}]},"previous":{"title":"栈 - 函数调用的指挥官","level":"1.3.4","depth":2,"path":"lab1/sec_5.md","ref":"lab1/sec_5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","callouts","page-footer-ex","-livereload","theme-comscore","-sharing","livereload"],"styles":{"website":"styles/styles.css"},"pluginsConfig":{"callouts":{"important":{"alert":"danger","picto":"fa-bullhorn"},"danger":{"alert":"danger","picto":"fa-exclamation-circle"},"question":{"alert":"info","picto":"fa-question-circle"},"hint":{"alert":"success","picto":"fa-lightbulb-o"},"showTypeInHeader":false,"must":{"alert":"warning","picto":"fa-edit"},"flag":{"alert":"success","picto":"fa-flag"},"info":{"alert":"info","picto":"fa-info-circle"},"note":{"alert":"info","picto":"fa-edit"},"fread":{"alert":"info","picto":"fa-comment"}},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"导航","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","visible":true},"page-footer-ex":{"copyright":"By UESTC Intelligent Chip and System Design Lab. 采用[知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WQ GitBook","gitbook":"*"},"file":{"path":"lab1/sec_6.md","mtime":"2022-05-20T11:03:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-31T13:35:53.361Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
