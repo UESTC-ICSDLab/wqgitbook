@@ -30,10 +30,10 @@
 
 ##### Block_RAM 
 + 单端口 RAM, 输入输出数据位宽固定为 32, 存储深度可调节.
-+ 使用 Vivado 提供的 IP 也可以实现 RAM, 但是不方便跨平台仿真, 考虑到本实验中需要的 RAM 功能非常简单, 适合直接通过 RTL 实现.
++ 使用 TD 提供的 IP 也可以实现 RAM, 但是不方便跨平台仿真, 考虑到本实验中需要的 RAM 功能非常简单, 适合直接通过 RTL 实现.
 
 ##### AHBlite_Interconnect
-+ 设有 1 个主设备接口和 3 个从设备接口, 主设备接口用于连接 Cortex-M0, 从设备接口 Port0 用于连接 BRAM, <font color="red">Port1 和 Port2 在本实验中没有被使用到.</font>
++ 设有 1 个主设备接口和 4 个从设备接口, 主设备接口用于连接 Cortex-M0, 从设备接口 Port0 用于连接 BRAM, <font color="red">Port1、Port2 和 Port3 在本实验中没有被使用到.</font>
 + 所有设备接口均采用 AHB 协议标准.
 
 ##### AHBlite_Block_RAM
@@ -41,10 +41,10 @@
 
 ##### AHBlite_Decoder 
 + 地址译码是总线互连模块实现从设备选择的关键, 总线根据为每个从设备划分的地址区域, 以及当前接收到的来自于 CM0 的地址 (HADDR), 使能对应的从设备. 其本质是对 HADDR 高位的译码.
-+ <font color="red">敲黑板: 本实验中的地址译码模块应当采用组合逻辑实现, 在编写设备使能有关的代码时, 应当注意使用 Port0_en 至 Port1_en 这几个 parameter, 以保证参数化设计, 这就要求应当根据从设备接口的使用情况合理地为 Port0_en 至 Port1_en 赋值. 
++ <font color="red">敲黑板: 本实验中的地址译码模块应当采用组合逻辑实现, 在编写设备使能有关的代码时, 应当注意使用 Port0_en 至 Port3_en 这几个 parameter, 以保证参数化设计, 这就要求应当根据从设备接口的使用情况合理地为 Port0_en 至 Port3_en 赋值. 
 
 ##### AHBlite_SlaveMUX
-+ 三个从设备返回的信号 (例如 HRDATA, HREADYOUT, HRESP) 进行多路选择后返回至 CM0.
++ 四个从设备返回的信号 (例如 HRDATA, HREADYOUT, HRESP) 进行多路选择后返回至 CM0.
 + 在本实验中已经编写完善, 可以不用管.
 
 ##### CortexM0_SoC
