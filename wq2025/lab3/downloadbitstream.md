@@ -2,7 +2,7 @@
 
 上一小节中, 我们通过仿真验证了 SoC 的功能, 接下来我们将系统实现在 FPGA 上, 进行上板调试.
 
-打开TD软件, 点击 Project--New Project, 创建一个新的工程，给工程命名为 "CortexM0_SoC", 工程文建立在 "/Task2/TD/" 文件夹下. 记得检查一下下方显示的工程路径是否合理,注意不能出现中文字体。选择 FPGA 芯片型号, 在Device Family 栏处选择 EG4, 然后在下方列表中选择 EG4S20BG256.
+打开TD软件, 点击 Project--New Project, 创建一个新的工程，给工程命名为 "CortexM0_SoC", 工程文建立在 "/Task2/TD/" 文件夹下. 记得检查一下下方显示的工程路径是否合理, <font color="red">注意不能出现中文字体</font>. 选择 FPGA 芯片型号, 在Device Family 栏处选择 EG4, 然后在下方列表中选择 EG4S20BG256.
 
 <center><img src="/img/lab2/pics/1.png" alt="20" style="zoom:60%;" /></center><center style="color:#0";>创建文件与型号选择</center> 
 
@@ -61,17 +61,17 @@
 > #### hint::出错了？
 > 初次综合生成可能会有提示：
 > `"ERROR:Cannot find license file .../Anlogic/TD5.6.2/license/Anlogic.lic"`
-> 这是因为TD软件没有找到license文件，相当于软件没有激活，把提供的Anlogic.lic放到它提示的文件夹（你的TD安装目录即可），之后再次综合生成应该就正常了
+> 这是因为 TD 软件没有找到 license 文件, 相当于软件没有激活, 把提供的 Anlogic.lic 放到它提示的文件夹(你的 TD 安装目录下的 license 文件夹里面即可), 之后再次综合生成应该就正常了. Anlogic.lic 位于 Task3 文件夹中.
 
 <center><img src="/img/lab2/pics/10.png" alt="31" style="zoom:73%;" /></center><center style="color:#0";>比特流下载成功提示窗口</center>
 
-点击上侧导航栏中Tools下的 Schematic Viewer--Read Design Schematic 选项, 可以看到综合和布局布线得到的原理图. 
+点击上侧导航栏中 Tools 下的 Schematic Viewer--Read Design Schematic 选项, 可以看到综合和布局布线得到的原理图. 
 
 <center><img src="/img/lab2/pics/11.png" alt="32" style="zoom:73%;" /></center><center style="color:#0";>进入 Schematic 界面</center>
 
 <center><img src="/img/lab2/pics/12.png" alt="32" style="zoom:73%;" /></center><center style="color:#0";>进入 Schematic 界面</center>
 
-点击Chip Viewer 标签, 可以看到设计对 FPGA 内部资源的占用情况.
+点击 Chip Viewer 标签, 可以看到设计对 FPGA 内部资源的占用情况.
 
 <center><img src="/img/lab2/pics/13.png" alt="27" style="zoom:100%;" /></center><center style="color:#0";>Device 界面</center>
 
@@ -81,11 +81,11 @@
 
 <!-- -->
 
-> #### important::为什么是两个接口?
-+ 标有 JTAG & UART 的接口是 FPGA 的下载配置接口, 用于比特流文件或其他配置文件的下载.
+> #### important::为什么用两个接口?
++ 标有 JTAG 的接口是 FPGA 的下载配置接口, 用于比特流文件或其他配置文件的下载.
 + 标有 DAP-Link 的接口是 CMSIS 调试接口, 用于 FPGA 中实现的 CortexM0 的调试. 该接口与板卡上的 CMSIS-DAP 调试器连接, 该调试器的另一端连接在 FPGA 的引脚上, 这些引脚通过约束文件与 CortexM0 的 SWDIO 和 SWCLK 这两个调试信号连接. 
 
-确保连线无误后, 点击左侧栏中的 Run, 这里一般系统会默认指定刚生成的比特流文件路径. 但这里仍要格外注意, 因为当你在多个工程间来回穿梭时, TD 可能会突然抽风, 给你默认指定一个其他工程中的比特流文件, 如果你没有注意而将它下载了进去, 那么接下来的调试工作可能会让你心态爆炸. 如若没有文件选择右侧导航栏中的Download -> ADD+，选择你刚刚创建的文件夹里面的***_RUNS文件，选择phy_1文件夹，选择刚刚生成的bit文件
+确保连线无误后, 点击左侧栏中的 Run, 这里一般系统会默认指定刚生成的比特流文件路径. 但这里仍要格外注意, 因为当你在多个工程间来回穿梭时, TD 可能会突然抽风, 给你默认指定一个其他工程中的比特流文件, 如果你没有注意而将它下载了进去, 那么接下来的调试工作可能会让你心态爆炸. 如果没有文件选择左侧导航栏中的 Download -> ADD+，选择你刚刚创建的文件夹里面的***_RUNS文件，选择 phy_1 文件夹，选择刚刚生成的 bit 文件.
 
 <center><img src="/img/lab2/pics/15.png" alt="29" style="zoom:70%;" /></center><center style="color:#0";>Bit文件选择</center>
 
@@ -95,7 +95,10 @@
 
 <center><img src="/img/lab2/pics/18.png" alt="36" style="zoom:70%;" /></center><center style="color:#0";>每次下载前记得检查比特流文件路径是否有误</center>
 
-如果在Bit文件选择的时候，发现没有识别到FPGA开发板，请参考[JTAG驱动安装](#jtag驱动安装)
+<!-- -->
+
+> #### important::没有识别到开发板?
++ 如果在 Bit 文件选择的时候, 发现没有识别到 FPGA 开发板, 请参考[JTAG驱动安装](#jtag驱动安装).
 
 <!-- -->
 > #### hint::TD 的工程目录结构

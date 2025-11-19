@@ -1,0 +1,689 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.1.3 地址空间 - SoC 的"门牌号系统" · WQ GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rtl.html" />
+    
+    
+    <link rel="prev" href="ahblite.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../lab0/introduction.html">
+            
+                <a href="../lab0/introduction.html">
+            
+                    
+                    LAB0: 工欲善其事 必先利其器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../lab0/FPGAintro.html">
+            
+                <a href="../lab0/FPGAintro.html">
+            
+                    
+                    FPGA 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../lab0/whyfpga.html">
+            
+                <a href="../lab0/whyfpga.html">
+            
+                    
+                    为什么是 FPGA？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../lab0/design_method.html">
+            
+                <a href="../lab0/design_method.html">
+            
+                    
+                    设计方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../lab0/board_intro.html">
+            
+                <a href="../lab0/board_intro.html">
+            
+                    
+                    平台介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../lab0/intro_tools.html">
+            
+                <a href="../lab0/intro_tools.html">
+            
+                    
+                    软硬件关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../lab0/keil.html">
+            
+                <a href="../lab0/keil.html">
+            
+                    
+                    Keil
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../lab0/td.html">
+            
+                <a href="../lab0/td.html">
+            
+                    
+                    TD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../lab0/modelsim.html">
+            
+                <a href="../lab0/modelsim.html">
+            
+                    
+                    Modelsim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lab1/introduction.html">
+            
+                <a href="../lab1/introduction.html">
+            
+                    
+                    LAB1: "施法"让 CPU 动起来
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lab1/sec_1.html">
+            
+                <a href="../lab1/sec_1.html">
+            
+                    
+                    1.1.1 ARM 汇编回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lab1/sec_2.html">
+            
+                <a href="../lab1/sec_2.html">
+            
+                    
+                    1.1.2 搭建 Keil 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lab1/sec_3.html">
+            
+                <a href="../lab1/sec_3.html">
+            
+                    
+                    1.1.3 运行吧, 第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lab1/sec_5.html">
+            
+                <a href="../lab1/sec_5.html">
+            
+                    
+                    1.2.1 栈 - 函数调用的指挥官
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lab1/sec_6.html">
+            
+                <a href="../lab1/sec_6.html">
+            
+                    
+                    1.2.2 自己动手, 理解函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    LAB2: "点石成金" - 实现你的首个 SoC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="bus.html">
+            
+                <a href="bus.html">
+            
+                    
+                    2.1.1 总线基本概念与原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ahblite.html">
+            
+                <a href="ahblite.html">
+            
+                    
+                    2.1.2 AHB-Lite 总线介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="address.html">
+            
+                <a href="address.html">
+            
+                    
+                    2.1.3 地址空间 - SoC 的"门牌号系统"
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="rtl.html">
+            
+                <a href="rtl.html">
+            
+                    
+                    2.2.1 硬件部分说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="keilproj.html">
+            
+                <a href="keilproj.html">
+            
+                    
+                    2.2.2 搭建 Keil 工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="modelsim.html">
+            
+                <a href="modelsim.html">
+            
+                    
+                    2.2.3 Modelsim 仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../verilog/introduction.html">
+            
+                <a href="../verilog/introduction.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../verilog/grammar.html">
+            
+                <a href="../verilog/grammar.html">
+            
+                    
+                    Verilog基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../verilog/enable_signal.html">
+            
+                <a href="../verilog/enable_signal.html">
+            
+                    
+                    使能信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../verilog/decoder.html">
+            
+                <a href="../verilog/decoder.html">
+            
+                    
+                    总线译码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../faq/introduction.html">
+            
+                <a href="../faq/introduction.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../add_notice.html">
+            
+                <a href="../add_notice.html">
+            
+                    
+                    补充通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../about/introduction.html">
+            
+                <a href="../about/introduction.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.1.3 地址空间 - SoC 的"门牌号系统"</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5730;&#x5740;&#x7A7A;&#x95F4;---soc-&#x7684;&#x95E8;&#x724C;&#x53F7;&#x7CFB;&#x7EDF;">&#x5730;&#x5740;&#x7A7A;&#x95F4; - SoC &#x7684;&quot;&#x95E8;&#x724C;&#x53F7;&#x7CFB;&#x7EDF;&quot;</h1>
+<p>&#x6253;&#x5F00;&#x7535;&#x8111;&#x73A9;&#x6E38;&#x620F;&#x65F6;, CPU &#x8981;&#x8C03;&#x7528;&#x663E;&#x5361;&#x6E32;&#x67D3;&#x753B;&#x9762;, &#x8981;&#x8BFB;&#x53D6;&#x5185;&#x5B58;&#x91CC;&#x7684;&#x6E38;&#x620F;&#x6570;&#x636E;, &#x8FD8;&#x8981;&#x63A5;&#x6536;&#x952E;&#x76D8;&#x9F20;&#x6807;&#x7B49;&#x5916;&#x8BBE;&#x7684;&#x8F93;&#x5165; &#x2014;&#x2014; &#x8FD9;&#x4E9B;&#x4E0D;&#x540C;&#x786C;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&quot;&#x6570;&#x636E;&#x4E32;&#x95E8;&quot;, &#x9760;&#x4EC0;&#x4E48;&#x624D;&#x80FD;&#x7CBE;&#x51C6;&#x627E;&#x5230;&#x5BF9;&#x65B9;? &#x5C31;&#x50CF;&#x4F60;&#x7ED9;&#x540C;&#x5B66;&#x5BC4;&#x5FEB;&#x9012;&#x9700;&#x8981;&#x51C6;&#x786E;&#x7684;&#x5730;&#x5740;, SoC &#x91CC;&#x7684;&#x6240;&#x6709;&#x786C;&#x4EF6;&#x7EC4;&#x4EF6;, &#x4E5F;&#x9700;&#x8981;&#x4E00;&#x5957;&#x7EDF;&#x4E00;&#x7684;&quot;&#x95E8;&#x724C;&#x53F7;&quot;&#x7CFB;&#x7EDF;, &#x8FD9;&#x5C31;&#x662F;&#x5730;&#x5740;&#x7A7A;&#x95F4;.</p>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x4EC0;&#x4E48;&#x662F;&#x5730;&#x5740;&#x7A7A;&#x95F4;"><i class="fa fa-question-circle"></i> &#x4EC0;&#x4E48;&#x662F;&#x5730;&#x5740;&#x7A7A;&#x95F4;?</h3></div><div class="panel-body"><p>&#x5728;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x590D;&#x6742;&#x7684; SoC &#x573A;&#x666F;&#x524D;, &#x5148;&#x4ECE;&#x719F;&#x6089;&#x7684;&#x5FEB;&#x9012;&#x573A;&#x666F;&#x7C7B;&#x6BD4;&#xFF1A;&#x4F60;&#x4F4F;&#x7684;&#x5C0F;&#x533A;&#x91CC;, &#x6BCF;&#x680B;&#x697C;&#x6709;&#x697C;&#x53F7;&#x3001;&#x6BCF;&#x4E2A;&#x5355;&#x5143;&#x6709;&#x5355;&#x5143;&#x53F7;&#x3001;&#x6BCF;&#x6237;&#x6709;&#x95E8;&#x724C;&#x53F7;, &#x5982;&#x679C;&#x628A;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x4E32;&#x8054;&#x8D77;&#x6765;, &#x5C31;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E32;&quot;&#x5730;&#x5740;&quot;. &#x901A;&#x8FC7;&#x8FD9;&#x4E32;&quot;&#x5730;&#x5740;&quot;, &#x5FEB;&#x9012;&#x5458;&#x4FBF;&#x80FD;&#x7CBE;&#x51C6;&#x627E;&#x5230;&#x6536;&#x4EF6;&#x4EBA;. SoC &#x91CC;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;, &#x672C;&#x8D28;&#x5C31;&#x662F;&#x7ED9;&#x82AF;&#x7247;&#x5185;&#x90E8;&#x6240;&#x6709;&quot;&#x80FD;&#x5B58;&#x6570;&#x636E;&#x6216;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#x786C;&#x4EF6;&quot;&#x5206;&#x914D;&#x7684;&#x552F;&#x4E00;&quot;&#x95E8;&#x724C;&#x53F7;&quot;&#x7684;&#x96C6;&#x5408;, &#x4E5F;&#x5C31;&#x662F;&#x5730;&#x5740;&#x7F16;&#x7801;&#x7684;&#x96C6;&#x5408;.</p></div></div>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x5305;&#x542B;&#x8FD0;&#x7B97;&#x5668;&#x3001;&#x63A7;&#x5236;&#x5668;&#x3001;&#x5B58;&#x50A8;&#x5668;&#x3001;&#x8F93;&#x5165;&#x8BBE;&#x5907;&#x548C;&#x8F93;&#x51FA;&#x8BBE;&#x5907;&#x4E94;&#x5927;&#x90E8;&#x4EF6;. &#x7531;&#x8FD0;&#x7B97;&#x5668;&#x548C;&#x63A7;&#x5236;&#x5668;&#x6784;&#x6210;&#x7684; CPU /&#x5904;&#x7406;&#x5668;&#x5728;&#x5185;&#x90E8;&#x901A;&#x4FE1;&#x4E2D;&#x5145;&#x5F53;&#x4E3B;&#x8BBE;&#x5907;, &#x5B58;&#x50A8;&#x5668;&#x3001;&#x8F93;&#x5165;&#x8BBE;&#x5907;&#x548C;&#x8F93;&#x51FA;&#x8BBE;&#x5907;&#x5145;&#x5F53;&#x4ECE;&#x8BBE;&#x5907;. &#x56E0;&#x6B64;&#x9700;&#x8981;&#x5BF9;&#x5B58;&#x50A8;&#x5668;&#x548C;&#x8FDE;&#x63A5;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x8BBE;&#x5907;&#x7684; IO &#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x5730;&#x5740;&#x7F16;&#x7801;, &#x8BA9;&#x4E3B;&#x8BBE;&#x5907;&#x5728;&#x53D1;&#x8D77;&#x901A;&#x4FE1;&#x65F6;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x7F16;&#x7801;&#x9009;&#x62E9;&#x5B58;&#x50A8;&#x5668;&#x6216; IO &#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x5BC4;&#x5B58;&#x5668;&#x5355;&#x5143;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x6362;.</p>
+<center><img src="../img/lab2/45.png" alt="45" style="zoom:75%;"></center><center style="color:#0" ;="">&#x5B58;&#x50A8;&#x5668;&#x4E0E; I/O &#x63A5;&#x53E3;&#x7684;&#x7F16;&#x5740;&#x65B9;&#x5F0F;</center> 
+
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x4EC0;&#x4E48;&#x662F;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7EDF;&#x4E00;&#x7F16;&#x5740;"><i class="fa fa-question-circle"></i> &#x4EC0;&#x4E48;&#x662F;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7EDF;&#x4E00;&#x7F16;&#x5740;?</h3></div><div class="panel-body"><p>&#x5982;&#x679C;&#x5B58;&#x50A8;&#x5668;&#x548C; IO &#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x5BC4;&#x5B58;&#x5668;&#x5355;&#x5143;&#x91C7;&#x7528;&#x4E00;&#x5957;&#x7EDF;&#x4E00;&#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;, &#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E00;&#x7F16;&#x5740;&#x65B9;&#x5F0F;&#x79F0;&#x4E3A;&quot;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&quot;&#x6216;&quot;&#x5B58;&#x50A8;&#x5668;&#x6620;&#x50CF;&quot;&#x7F16;&#x5740;. &#x5176;&#x672C;&#x610F;&#x5728;&#x4E8E;&#x5C06; IO &#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x5BC4;&#x5B58;&#x5668;&#x4E5F;&#x89C6;&#x4E3A;&#x4E00;&#x79CD;&#x5B58;&#x50A8;&#x5668;, &#x91C7;&#x7528;&#x548C;&#x5B58;&#x50A8;&#x5668;&#x540C;&#x6837;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;. 
+&#x91C7;&#x7528;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&#x7684;&#x4F18;&#x70B9;&#x5728;&#x4E8E;&#x5728;&#x6307;&#x4EE4;&#x96C6;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x4E13;&#x95E8;&#x8BBE;&#x8BA1;&#x7279;&#x5B9A;&#x7684; IO &#x6307;&#x4EE4;, &#x5BF9; IO &#x63A5;&#x53E3;&#x7684;&#x8BFB;&#x5199;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8F83;&#x4E3A;&#x4E30;&#x5BCC;&#x7684;&#x5BFB;&#x5740;&#x65B9;&#x5F0F;. &#x4F8B;&#x5982;, &#x7EDF;&#x4E00;&#x7F16;&#x5740;&#x540E;, CPU &#x8BBF;&#x95EE;&#x663E;&#x5361;&#x7684;&#x63A7;&#x5236;&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x8BFB;&#x5185;&#x5B58;&#x91CC;&#x7684;&#x6570;&#x636E;, &#x7528;&#x7684;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&quot;&#x8BFB;/&#x5199;&#x6307;&#x4EE4;&quot;, &#x53EA;&#x9700;&#x8981;&#x6539;&#x5730;&#x5740;&#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x8BFB;&#x5199;&#x8BBE;&#x5907;&#x7684;&#x9009;&#x62E9;. &#x800C;&#x5BF9;&#x6211;&#x4EEC;&#x505A;&#x5B9E;&#x9A8C;&#x6765;&#x8BF4;, &#x8FD9;&#x610F;&#x5473;&#x7740;&#x64CD;&#x4F5C;&#x5916;&#x8BBE;&#x5C31;&#x50CF;&#x8BFB;&#x5199;&#x666E;&#x901A;&#x5185;&#x5B58;&#x4E00;&#x6837;&#x7B80;&#x5355;. </p></div></div>
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x5730;&#x5740;&#x6620;&#x5C04;---&#x95E8;&#x724C;&#x53F7;&#x53EF;&#x7075;&#x6D3B;&#x8C03;&#x6574;"><i class="fa fa-lightbulb-o"></i> &#x5730;&#x5740;&#x6620;&#x5C04; - &quot;&#x95E8;&#x724C;&#x53F7;&quot;&#x53EF;&#x7075;&#x6D3B;&#x8C03;&#x6574;</h3></div><div class="panel-body"><p>SoC &#x7684;&#x5730;&#x5740;&#x5206;&#x914D;&#x4E0D;&#x662F;&quot;&#x56FA;&#x5B9A;&#x6B7B;&quot;&#x7684;, &#x800C;&#x662F;&#x901A;&#x8FC7;&quot;&#x5730;&#x5740;&#x6620;&#x5C04;&quot;&#x673A;&#x5236;&#x7075;&#x6D3B;&#x914D;&#x7F6E;. &#x6BD4;&#x5982;&#x6709;&#x4E9B; SoC &#x652F;&#x6301;&quot;Boot&#x5F15;&#x5BFC;&#x7A0B;&#x5E8F;&quot;&#x5728;&#x542F;&#x52A8;&#x65F6;, &#x628A;&#x5185;&#x5B58;&#x7684;&#x5730;&#x5740;&#x8303;&#x56F4;&#x4ECE; 0x00000000 &#x6620;&#x5C04;&#x5230; 0x80000000, &#x907F;&#x514D;&#x548C;&#x542F;&#x52A8;&#x4EE3;&#x7801;&#x7684;&#x5730;&#x5740;&#x51B2;&#x7A81;; &#x8FD8;&#x6709;&#x4E9B;&#x9AD8;&#x7AEF; SoC &#x652F;&#x6301;&quot;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&quot;, CPU &#x770B;&#x5230;&#x7684;&#x5730;&#x5740;&#x548C;&#x786C;&#x4EF6;&#x5B9E;&#x9645;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x4E0D;&#x4E00;&#x6837;, &#x901A;&#x8FC7; MMU&#xFF08;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5355;&#x5143;&#xFF09;&#x5B9E;&#x65F6;&#x8F6C;&#x6362;, &#x65E2;&#x80FD;&#x4FDD;&#x62A4;&#x4E0D;&#x540C;&#x7A0B;&#x5E8F;&#x7684;&#x5730;&#x5740;&#x5B89;&#x5168;, &#x53C8;&#x80FD;&#x8BA9;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x66F4;&#x7075;&#x6D3B;.</p></div></div>
+<p>&#x5BF9;&#x4E8E;&#x5B9E;&#x9A8C;&#x7528;&#x5230;&#x7684; Cortex-M0 &#x5904;&#x7406;&#x5668;, &#x5176;&#x91C7;&#x7528;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&#x7684;&#x7F16;&#x5740;&#x65B9;&#x5F0F;. &#x6240;&#x6709;&#x7684; Cortex-M &#x5904;&#x7406;&#x5668;&#x90FD;&#x62E5;&#x6709; 4GB &#x7684;&#x5B58;&#x50A8;&#x5668;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF08;&#x5373; 32 &#x4F4D;&#x7684;&#x5730;&#x5740;&#x7EBF;&#xFF09;, &#x8BE5;&#x7A7A;&#x95F4;&#x5728;&#x67B6;&#x6784;&#x4E0A;&#x88AB;&#x5B9A;&#x4E49;&#x6210;&#x591A;&#x4E2A;&#x533A;&#x57DF;, &#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x4E0D;&#x540C;&#x8BBE;&#x5907;&#x95F4;&#x7684;&#x8F6F;&#x4EF6;&#x53EF;&#x79FB;&#x690D;&#x6027;, &#x6BCF;&#x4E2A;&#x7A7A;&#x95F4;&#x533A;&#x57DF;&#x90FD;&#x6709;&#x63A8;&#x8350;&#x7528;&#x9014;. &#x5728; 0x00000000-0x1FFFFFFF &#x8303;&#x56F4;&#x5185;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;, &#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#x5730;&#x5740;&#x662F;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5F02;&#x5E38;&#x5411;&#x91CF;&#x8868;. 0x20000000-0x3FFFFFFF &#x8303;&#x56F4;&#x5185;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;, &#x901A;&#x5E38;&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x5B58;&#x50A8;&#x5668;&#x4F1A;&#x88AB;&#x96C6;&#x6210;&#x5230;&#x7247;&#x4E0A;. 0x60000000-0x9FFFFFFF &#x8303;&#x56F4;&#x5185;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x7528;&#x4E8E;&#x5916;&#x90E8; RAM, &#x8FD9;&#x90E8;&#x5206;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E00;&#x822C;&#x9700;&#x8981;&#x8BBE;&#x8BA1;&#x4E13;&#x95E8;&#x7684;&#x5916;&#x90E8;&#x5B58;&#x50A8;&#x5668;&#x6269;&#x5C55;&#x63A5;&#x53E3;&#x6765;&#x52A0;&#x4EE5;&#x4F7F;&#x7528;.</p>
+<center><img src="../img/lab2/46.png" alt="46" style="zoom:75%;"></center><center style="color:#0" ;="">Cortex-M &#x5904;&#x7406;&#x5668;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x5206;&#x914D;</center> 
+
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x5730;&#x5740;&#x8BD1;&#x7801;---&#x95E8;&#x724C;&#x53F7;&#x7684;&#x7CBE;&#x51C6;&#x5206;&#x62E3;&#x5458;"><i class="fa fa-lightbulb-o"></i> &#x5730;&#x5740;&#x8BD1;&#x7801; - &#x201C;&#x95E8;&#x724C;&#x53F7;&#x201D;&#x7684;&#x7CBE;&#x51C6;&#x5206;&#x62E3;&#x5458;</h3></div><div class="panel-body"><p>&#x4E4B;&#x524D;&#x8C08;&#x5230; SoC &#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x662F;&#x786C;&#x4EF6;&#x7684;&quot;&#x95E8;&#x724C;&#x53F7;&quot;&#x7CFB;&#x7EDF; &#x2014;&#x2014; &#x5185;&#x5B58;&#x3001;&#x663E;&#x5361;&#x7B49;&#x90FD;&#x6709;&#x4E86;&#x4E13;&#x5C5E;&#x5730;&#x5740;. &#x4F46;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF1A;&#x5F53; CPU &#x53D1;&#x51FA;&quot;&#x8BFB;&#x53D6; 0x80000000 &#x5730;&#x5740;&#x6570;&#x636E;&quot;&#x7684;&#x6307;&#x4EE4;&#x65F6;, &#x603B;&#x7EBF;&#x4E0A;&#x90A3;&#x4E48;&#x591A;&#x786C;&#x4EF6;, &#x600E;&#x4E48;&#x786E;&#x4FDD;&#x53EA;&#x6709;&#x663E;&#x5361;&#x4F1A;&quot;&#x5E94;&#x7B54;&quot;, &#x800C;&#x5185;&#x5B58;&#x4E0D;&#x4F1A;&quot;&#x63A5;&#x9519;&#x8BDD;&quot;&#xFF1F;&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4F4D;&#x7CBE;&#x51C6;&#x7684;&quot;&#x5206;&#x62E3;&#x5458;&quot; &#x2014;&#x2014; &#x5730;&#x5740;&#x8BD1;&#x7801;. &#x5B83;&#x8D1F;&#x8D23;&#x89E3;&#x6790;&quot;&#x95E8;&#x724C;&#x53F7;&quot;, &#x627E;&#x5230;&#x552F;&#x4E00;&#x7684;&#x76EE;&#x6807;&#x786C;&#x4EF6;.</p></div></div>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x4EC0;&#x4E48;&#x662F;&#x5730;&#x5740;&#x8BD1;&#x7801;&#xFF1F;"><i class="fa fa-question-circle"></i> &#x4EC0;&#x4E48;&#x662F;&#x5730;&#x5740;&#x8BD1;&#x7801;&#xFF1F;</h3></div><div class="panel-body"><p>&#x4E3A;&#x4E86;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x7684;&#x8BFB;/&#x5199;&#x5BF9;&#x8C61;, &#x9700;&#x8981;&#x6839;&#x636E;&#x603B;&#x7EBF;&#x4E0A;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x4EA7;&#x751F;&#x5730;&#x5740;&#x9009;&#x62E9;&#x4FE1;&#x53F7;, &#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x79F0;&#x4E3A;&#x5730;&#x5740;&#x8BD1;&#x7801;. &#x9664;&#x603B;&#x7EBF;&#x5730;&#x5740;&#x4FE1;&#x53F7;&#x5916;, &#x8BD1;&#x7801;&#x7535;&#x8DEF;&#x4E5F;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6839;&#x636E;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x65F6;&#x7684;&#x6D41;&#x5411;&#xFF08;&#x8BFB;/&#x5199;&#xFF09;&#x3001;&#x6570;&#x636E;&#x5BBD;&#x5EA6;&#xFF08;8 &#x4F4D;&#x3001;16 &#x4F4D;&#x548C; 32 &#x4F4D;&#x7B49;&#xFF09;&#x3001;&#x4E2D;&#x65AD;&#x4F20;&#x9001;&#x65B9;&#x5F0F;&#x6216; DMA &#x4F20;&#x9001;&#x65B9;&#x5F0F;&#x7B49;&#x8981;&#x6C42;, &#x9009;&#x62E9;&#x76F8;&#x5173;&#x63A7;&#x5236;&#x4FE1;&#x53F7;&#x53C2;&#x4E0E;&#x8BD1;&#x7801;. </p></div></div>
+<p>&#x4E3A;&#x51CF;&#x5C0F;&#x7535;&#x8DEF;&#x89C4;&#x6A21;, &#x5E38;&#x5229;&#x7528;&#x7CFB;&#x7EDF;&#x9AD8;&#x4F4D;&#x5730;&#x5740;&#x4FE1;&#x53F7;&#x548C;&#x76F8;&#x5173;&#x63A7;&#x5236;&#x4FE1;&#x53F7;&#x4EA7;&#x751F;&#x7247;&#x9009;&#x4FE1;&#x53F7;, &#x4EE5;&#x9009;&#x4E2D;&#x76F8;&#x5173;&#x6A21;&#x5757;. &#x7CFB;&#x7EDF;&#x4F4E;&#x4F4D;&#x5730;&#x5740;&#x4FE1;&#x53F7;&#x5219;&#x4F5C;&#x4E3A;&#x5B57;&#x9009;&#x4FE1;&#x53F7;, &#x5728;&#x7247;&#x9009;&#x6709;&#x6548;&#x7684;&#x6A21;&#x5757;&#xFF08;&#x6216;&#x82AF;&#x7247;&#xFF09;&#x4E0A;&#x9009;&#x4E2D;&#x5177;&#x4F53;&#x5355;&#x5143;, &#x4EE5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5B58;&#x53D6;. &#x901A;&#x8FC7;&#x4E24;&#x7EA7;&#x8BD1;&#x7801;&#x4EE5;&#x540E;, &#x65E2;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x4E3B;&#x8BBE;&#x5907;&#x6240;&#x9009;&#x5B9A;&#x7684;&#x5177;&#x4F53;&#x8BFB;/&#x5199;&#x5BF9;&#x8C61;, &#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x5728;&#x4E3B;&#x8BBE;&#x5907;&#x548C;&#x4ECE;&#x8BBE;&#x5907;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x6362;.</p>
+<center><img src="../img/lab2/47.png" alt="47" style="zoom:75%;"></center><center style="color:#0" ;="">&#x4E24;&#x7EA7;&#x5730;&#x5740;&#x8BD1;&#x7801;&#x793A;&#x610F;&#x56FE;</center> 
+
+<p>&#x5728;&#x6839;&#x636E;&#x7CFB;&#x7EDF;&#x9700;&#x6C42;&#x786E;&#x5B9A;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x540E;, &#x7247;&#x9009;&#x4FE1;&#x53F7;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x5168;&#x8BD1;&#x7801;&#x3001;&#x90E8;&#x5206;&#x8BD1;&#x7801;&#x6216;&#x7EBF;&#x8BD1;&#x7801;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF08;&#x6216;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x7EC4;&#x5408;&#xFF09;&#x6765;&#x5B9E;&#x73B0;. &#x5168;&#x8BD1;&#x7801;&#x6307;&#x6240;&#x6709;&#x672A;&#x53C2;&#x52A0;&#x5B57;&#x9009;&#x7684;&#x9AD8;&#x4F4D;&#x5730;&#x5740;&#x7EBF;&#x5168;&#x90E8;&#x53C2;&#x52A0;&#x8BD1;&#x7801;, &#x4EE5;&#x5F62;&#x6210;&#x7247;&#x9009;&#x4FE1;&#x53F7;; &#x90E8;&#x5206;&#x8BD1;&#x7801;&#x6307;&#x53EA;&#x9009;&#x7528;&#x9AD8;&#x4F4D;&#x5730;&#x5740;&#x7EBF;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x8BD1;&#x7801;, &#x4EE5;&#x4EA7;&#x751F;&#x7247;&#x9009;&#x4FE1;&#x53F7;, &#x672A;&#x53C2;&#x52A0;&#x8BD1;&#x7801;&#x7684;&#x9AD8;&#x4F4D;&#x5730;&#x5740;&#x7EBF;&#x4E0D;&#x505A;&#x5904;&#x7406;; &#x7EBF;&#x8BD1;&#x7801;&#x5219;&#x6307;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7684;&#x5730;&#x5740;&#x4FE1;&#x53F7;&#x7EBF;&#x4F5C;&#x4E3A;&#x7247;&#x9009;&#x4FE1;&#x53F7;.</p>
+<p>&#x5047;&#x8BBE;&#x67D0;&#x7CFB;&#x7EDF;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x5BBD;&#x5EA6;&#x4E3A; 32 &#x4F4D;, &#x73B0;&#x9700;&#x8981;&#x5C06; 000C0000H&#xFF5E;000CFFFFH &#x5730;&#x5740;&#x8303;&#x56F4;&#x5212;&#x5206;&#x4E3A; 8 &#x4E2A;&#x540C;&#x6837;&#x5927;&#x5C0F;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;, &#x63D0;&#x4F9B;&#x7ED9;&#x603B;&#x7EBF;&#x4E0A;&#x7684; 8 &#x4E2A;&#x6A21;&#x5757;. </p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x505A;-soc-&#x8BBE;&#x8BA1;-&#x4F18;&#x5148;&#x9009;&#x54EA;&#x79CD;&#x8BD1;&#x7801;&#x65B9;&#x5F0F;&#xFF1F;"><i class="fa fa-lightbulb-o"></i> &#x505A; SoC &#x8BBE;&#x8BA1;, &#x4F18;&#x5148;&#x9009;&#x54EA;&#x79CD;&#x8BD1;&#x7801;&#x65B9;&#x5F0F;&#xFF1F;</h3></div><div class="panel-body"><p>&#x4F18;&#x5148;&#x9009;&#x5168;&#x8BD1;&#x7801;! &#x5728; SoC &#x4E2D;&#x4E00;&#x822C;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x6A21;&#x5757;&#x548C;&#x5916;&#x8BBE;, &#x5730;&#x5740;&#x7A7A;&#x95F4;&#x7D27;&#x5F20;&#x4E14;&#x5BB9;&#x6613;&#x51B2;&#x7A81;. &#x5168;&#x8BD1;&#x7801;&#x867D;&#x7136;&#x7535;&#x8DEF;&#x7A0D;&#x590D;&#x6742;, &#x4F46;&#x80FD;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x5730;&#x5740;&#x552F;&#x4E00;, &#x4E0D;&#x7528;&#x8003;&#x8651;&#x8F6F;&#x4EF6;&#x907F;&#x5751;, &#x8C03;&#x8BD5;&#x65F6;&#x66F4;&#x7701;&#x5FC3;. &#x6BD4;&#x5982;&#x5B9E;&#x9A8C;&#x4E2D;&#x5982;&#x679C;&#x7528;&#x90E8;&#x5206;&#x8BD1;&#x7801;, &#x4E0D;&#x5C0F;&#x5FC3;&#x5199;&#x4E86;&#x91CD;&#x53E0;&#x5730;&#x5740;, &#x53EF;&#x80FD;&#x4F1A;&#x540C;&#x65F6;&#x89E6;&#x53D1;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5916;&#x8BBE;, &#x5BFC;&#x81F4;&#x5B9E;&#x9A8C;&#x5931;&#x8D25;, &#x6392;&#x67E5;&#x8D77;&#x6765;&#x5F88;&#x9EBB;&#x70E6;. </p></div></div>
+<p>Cortex M0 &#x5F00;&#x6E90;&#x5904;&#x7406;&#x5668;&#x91C7;&#x7528;&#x7EDF;&#x4E00;&#x7F16;&#x5740;&#x7684;&#x7F16;&#x5740;&#x65B9;&#x5F0F;, &#x5904;&#x7406;&#x5668;&#x6838;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x7F16;&#x7801;&#x8BBF;&#x95EE;&#x5916;&#x8BBE;, &#x6240;&#x6709;&#x7684;&#x5916;&#x8BBE;&#x5728;&#x5904;&#x7406;&#x5668;&#x6838;&#x770B;&#x6765;&#x90FD;&#x662F; memory map &#x4E0A;&#x7684;&#x4E00;&#x5757;&#x8FDE;&#x7EED;&#x533A;&#x57DF;, &#x8BBF;&#x95EE;&#x8FD9;&#x5757;&#x533A;&#x57DF;&#x5C31;&#x662F;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7684;&#x5916;&#x8BBE;. &#x4F8B;&#x5982;&#x4E66;&#x4E2D;&#x7684; RAMCODE , &#x5176;&#x5730;&#x5740;&#x7F16;&#x7801; 0x00000000-0x0000ffff, &#x90A3;&#x4E48;&#x5904;&#x7406;&#x5668;&#x6838;&#x901A;&#x8FC7; AHB &#x603B;&#x7EBF;&#x53D1;&#x51FA;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x6B21;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x53EA;&#x8981;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x4E0A;&#x7684;&#x503C;&#x5728; 0x00000000-0x0000ffff &#x4E4B;&#x95F4;, &#x90FD;&#x8BA4;&#x4E3A;&#x662F;&#x5904;&#x7406;&#x5668;&#x6838;&#x5728;&#x5411; RAMCODE &#x8FDB;&#x884C;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;.</p>
+<center><img src="../img/lab2/58.png" alt="58" style="zoom:75%;"></center><center style="color:#0" ;="">&#x8BD1;&#x7801;&#x5668;(Decoder)&#x5185;&#x90E8;&#x7ED3;&#x6784;</center> 
+
+<p>&#x5728;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x5212;&#x5B9A;&#x540E;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6765;&#x96C6;&#x6210;&#x5404;&#x4E2A;&#x5916;&#x56F4;&#x6A21;&#x5757;/IP. Decoder &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5BF9;&#x5730;&#x5740;&#x603B;&#x7EBF;&#x8FDB;&#x884C;&#x8BD1;&#x7801;&#xFF0C;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x5916;&#x8BBE;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;, &#x540C;&#x6837;&#x4EE5; RAMCODE &#x5916;&#x8BBE;&#x4E3A;&#x4F8B;, &#x7531;&#x4E8E;&#x5176;&#x5730;&#x5740;&#x7F16;&#x7801;&#x4E3A; 0x00000000-0x0000ffff, &#x90A3;&#x4E48;&#x53EA;&#x8981;&#x5730;&#x5740;&#x603B;&#x7EBF; HADDR &#x7684;&#x9AD8; 16bit &#x4E3A; 0x0000 &#x65F6;, &#x5730;&#x5740;&#x603B;&#x7EBF;&#x7684;&#x503C;&#x5FC5;&#x5B9A;&#x5904;&#x4E8E; RAMCODE &#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;&#x533A;&#x57DF;&#x4E2D;, &#x5219;&#x5224;&#x5B9A;&#x4E3A;&#x5904;&#x7406;&#x5668;&#x6838;&#x5BF9; RAMCODE &#x63D0;&#x8D77;&#x7684;&#x4E00;&#x6B21;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x56E0;&#x6B64; RAMCODE &#x5BF9;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7; HSEL &#x5C06;&#x4F1A;&#x88AB;&#x7F6E;&#x4F4D;&#x6709;&#x6548;&#xFF1B;&#x82E5; HADDR &#x7684;&#x9AD8; 16bit &#x4E0D;&#x4E3A; 0x0000 &#x65F6;&#xFF08;&#x4F8B;&#x5982; 0x4000&#xFF09;, &#x5730;&#x5740;&#x603B;&#x7EBF;&#x7684;&#x503C;&#x4E0D;&#x5904;&#x4E8E; RAMCODE &#x7684;&#x5730;&#x5740;&#x7F16;&#x7801;&#x533A;&#x57DF;, &#x5219;&#x5224;&#x5B9A;&#x4E3A;&#x4E0D;&#x662F;&#x5BF9; RAMCODE &#x7684;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;, &#x56E0;&#x6B64;&#x5BF9;&#x5E94;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;&#x88AB;&#x7F6E;&#x4F4D;&#x65E0;&#x6548;.</p>
+<p>Slave MUX &#x7684;&#x4F5C;&#x7528;&#x5219;&#x662F;&#x901A;&#x8FC7;&#x6BCF;&#x4E2A;&#x5916;&#x8BBE;&#x7684;&#x9009;&#x62E9;&#x4FE1;&#x53F7;, &#x5BF9;&#x6240;&#x6709;&#x5916;&#x8BBE;&#x8FD4;&#x56DE;&#x7684;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF08;HRDATA&#xFF09;&#x3001;&#x54CD;&#x5E94;&#x4FE1;&#x53F7;&#xFF08;HRESP&#xFF09;&#x4EE5;&#x53CA;&#x53CD;&#x9988;&#x4FE1;&#x53F7;&#xFF08;HREADYOUT&#xFF09;&#x8FDB;&#x884C;&#x9009;&#x62E9;, &#x4FDD;&#x8BC1;&#x8FD4;&#x56DE;&#x7ED9;Master &#x7AEF;&#x53E3;&#x7684;&#x6570;&#x636E;&#x6765;&#x81EA;&#x4E8E;&#x5F53;&#x524D;&#x603B;&#x7EBF;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x6807;&#x5916;&#x8BBE;.</p>
+<p>&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x7684;&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x6765;&#x6784;&#x9020; Cortex M0 &#x4E0E;&#x5404;&#x4E2A;&#x5916;&#x56F4;&#x7684;&#x6A21;&#x5757;/IP &#x7684;&#x4E92;&#x8054;&#x7ED3;&#x6784;.</p>
+<center><img src="../img/lab2/59.png" alt="59" style="zoom:75%;"></center><center style="color:#0" ;="">&#x603B;&#x7EBF;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x7ED3;&#x6784;&#x56FE;</center> 
+
+<!-- -->
+<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title" id="&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5B9E;&#x8DF5;&#x5427;"><i class="fa fa-bullhorn"></i> &#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5B9E;&#x8DF5;&#x5427;!</h3></div><div class="panel-body"><p>&#x7EB8;&#x4E0A;&#x5F97;&#x6765;&#x7EC8;&#x89C9;&#x6D45;, &#x60F3;&#x8981;&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x603B;&#x7EBF;&#x548C;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x7684;&#x5965;&#x79D8;, &#x52A0;&#x6DF1;&#x5927;&#x5BB6;&#x8005;&#x5BF9;&#x57FA;&#x4E8E; CortexM0 &#x7684; SoC &#x7684;&#x7406;&#x89E3;, &#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x52A8;&#x624B;&#x4FEE;&#x6539;&#x4EE3;&#x7801;, &#x5229;&#x7528; AHB-lite &#x603B;&#x7EBF;&#x5C06; Block RAM &#x4E0E; Cortex-M0 &#x88F8;&#x6838;&#x76F8;&#x8FDE;&#x63A5;, &#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x7684; SoC &#x7CFB;&#x7EDF;, &#x5E76;&#x901A;&#x8FC7; Modelsim &#x5BF9;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x4EFF;&#x771F;&#x9A8C;&#x8BC1;.</p></div></div>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By UESTC Intelligent Chip and System Design Lab. &#x91C7;&#x7528;<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 3.0 &#x4E2D;&#x56FD;&#x5927;&#x9646; &#x8BB8;&#x53EF;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E; 2025-11-18 20:58:54 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ahblite.html" class="navigation navigation-prev " aria-label="Previous page: 2.1.2 AHB-Lite 总线介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="rtl.html" class="navigation navigation-next " aria-label="Next page: 2.2.1 硬件部分说明">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.1.3 地址空间 - SoC 的\"门牌号系统\"","level":"1.4.3","depth":2,"next":{"title":"2.2.1 硬件部分说明","level":"1.4.4","depth":2,"path":"lab2/rtl.md","ref":"lab2/rtl.md","articles":[]},"previous":{"title":"2.1.2 AHB-Lite 总线介绍","level":"1.4.2","depth":2,"path":"lab2/ahblite.md","ref":"lab2/ahblite.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","callouts","page-footer-ex","livereload","theme-comscore","-sharing"],"styles":{"website":"styles/styles.css"},"pluginsConfig":{"callouts":{"important":{"alert":"danger","picto":"fa-bullhorn"},"danger":{"alert":"danger","picto":"fa-exclamation-circle"},"question":{"alert":"info","picto":"fa-question-circle"},"hint":{"alert":"success","picto":"fa-lightbulb-o"},"showTypeInHeader":false,"must":{"alert":"warning","picto":"fa-edit"},"flag":{"alert":"success","picto":"fa-flag"},"info":{"alert":"info","picto":"fa-info-circle"},"note":{"alert":"info","picto":"fa-edit"},"fread":{"alert":"info","picto":"fa-comment"}},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"导航","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","visible":true},"livereload":{},"page-footer-ex":{"copyright":"By UESTC Intelligent Chip and System Design Lab. 采用[知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WQ GitBook","gitbook":"*"},"file":{"path":"lab2/address.md","mtime":"2025-11-18T12:58:54.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-19T04:16:35.397Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
