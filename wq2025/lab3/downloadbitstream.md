@@ -1,8 +1,8 @@
 # 下载比特流到 FPGA
 
-上一小节中, 我们通过仿真验证了 SoC 的功能, 接下来我们将系统实现在 FPGA 上, 进行上板调试.
+上一实验中, 我们通过仿真验证了 SoC 的功能, 接下来我们将系统实现在 FPGA 上, 进行上板调试.
 
-打开TD软件, 点击 Project--New Project, 创建一个新的工程，给工程命名为 "CortexM0_SoC", 工程文建立在 "/Task2/TD/" 文件夹下. 记得检查一下下方显示的工程路径是否合理, <font color="red">注意不能出现中文字体</font>. 选择 FPGA 芯片型号, 在Device Family 栏处选择 EG4, 然后在下方列表中选择 EG4S20BG256.
+打开 TD 软件, 点击 Project--New Project, 创建一个新的工程, 给工程命名为 "CortexM0_SoC", 工程建立在 "/Task3/Count/TD/" 文件夹下. 记得检查一下下方显示的工程路径是否合理, <font color="red">注意不能出现中文字体</font>. 选择 FPGA 芯片型号, 在 Device Family 栏处选择 EG4, 然后在下方列表中选择 EG4S20BG256.
 
 <center><img src="/img/lab2/pics/1.png" alt="20" style="zoom:60%;" /></center><center style="color:#0";>创建文件与型号选择</center> 
 
@@ -10,13 +10,13 @@
 
 <center><img src="/img/lab2/pics/3.png" alt="20" style="zoom:60%;" /></center><center style="color:#0";>创建文件与型号选择</center> 
 
-进入源文件添加界面, 因为我们的设计源文件都在 "/Task2/rtl" 下, 所以这里右键点击 Hierarchy, 选择ADD Sources 直接将 "/Task2/rtl" 目录添加进来. 点击OK即可添加成功.
+进入源文件添加界面, 因为我们的设计源文件都在 "/Task3/Count/rtl" 下, 所以这里右键点击 Hierarchy, 选择 ADD Sources 直接将 "/Task3/Count/rtl" 目录添加进来. 点击 OK 即可添加成功.
 
 <center><img src="/img/lab2/pics/4.png" alt="20" style="zoom:60%;" /></center><center style="color:#0";>添加源文件</center> 
 
 <center><img src="/img/lab2/pics/5.png" alt="20" style="zoom:60%;" /></center><center style="color:#0";>添加源文件</center> 
 
-右键constraint_1（active），选择 Add ADC File进入约束文件添加界面, 我们已经在 "/Task2/TD/" 中为你准备好了约束文件 "pin.xdc", 将这个文件添加进来即可.
+右键 constraint_1（active）, 选择 Add ADC File 进入约束文件添加界面, 我们已经在 "/Task3/Count/TD/" 中为你准备好了约束文件 "pin.xdc", 将这个文件添加进来即可.
 
 <center><img src="/img/lab2/pics/6.png" alt="20" style="zoom:60%;" /></center><center style="color:#0";>添加约束文件</center> 
 
@@ -32,14 +32,14 @@
 <!-- -->
 > #### hint::本实验中的约束文件
 >
-> 打开 "/Task2/TD/pin.adc":
+> 打开 "/Task3/TD/pin.adc":
 > ```
 > set_pin_assignment	{ RSTn }	{ LOCATION = A9; IOSTANDARD = LVCMOS25; PULLTYPE = PULLUP; }
 > set_pin_assignment	{ SWCLK }	{ LOCATION = K3; IOSTANDARD = LVCMOS25; PULLTYPE = PULLUP; }
 > set_pin_assignment	{ SWDIO }	{ LOCATION = K6; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
 > set_pin_assignment	{ clk }	{ LOCATION = R7; IOSTANDARD = LVCMOS25; PULLTYPE = PULLUP; }
 > ```
-> 上述代码中, clk 管脚约束到 FPGA 开发板上的 50MHZ 时钟; RSTn 管脚约束到 SW0 开关, <font color="red">开关向上拨时, 连接到电源 VDD 上, 此时 SoC 才可以工作</font>，
+> 上述代码中, clk 管脚约束到 FPGA 开发板上的 50MHZ 时钟; RSTn 管脚约束到 SW0 开关, <font color="red">开关向上拨时, 连接到电源 VDD 上, 此时 SoC 才可以工作</font>, 
 
 
 
@@ -53,9 +53,9 @@
 
 <center><img src="/img/lab2/pics/9.png" alt="25" style="zoom:100%;" /></center><center style="color:#0";>TD 工程主界面</center>
 
-然后点击上侧导航栏的Run, 这时 TD 将会依次执行 RTL 分析 (RTL Analysis), 综合 (Synthesis), 实现 (Implementation) 和 生成比特流文件 (Generate Bitstream) 四个步骤. 最终生成的比特流文件用于 FPGA 的配置.
+然后点击上侧导航栏的 Run, 这时 TD 将会依次执行 RTL 分析 (RTL Analysis), 综合 (Synthesis), 实现 (Implementation) 和 生成比特流文件 (Generate Bitstream) 四个步骤. 最终生成的比特流文件用于 FPGA 的配置.
 
-等待 TD 运行一段时间后, 可以看到弹出的提示窗口, 表明比特流文件生成成功，关闭该窗口. 
+等待 TD 运行一段时间后, 可以看到弹出的提示窗口, 表明比特流文件生成成功, 关闭该窗口. 
 
 <!-- -->
 > #### hint::出错了？
@@ -85,7 +85,7 @@
 + 标有 JTAG 的接口是 FPGA 的下载配置接口, 用于比特流文件或其他配置文件的下载.
 + 标有 DAP-Link 的接口是 CMSIS 调试接口, 用于 FPGA 中实现的 CortexM0 的调试. 该接口与板卡上的 CMSIS-DAP 调试器连接, 该调试器的另一端连接在 FPGA 的引脚上, 这些引脚通过约束文件与 CortexM0 的 SWDIO 和 SWCLK 这两个调试信号连接. 
 
-确保连线无误后, 点击左侧栏中的 Run, 这里一般系统会默认指定刚生成的比特流文件路径. 但这里仍要格外注意, 因为当你在多个工程间来回穿梭时, TD 可能会突然抽风, 给你默认指定一个其他工程中的比特流文件, 如果你没有注意而将它下载了进去, 那么接下来的调试工作可能会让你心态爆炸. 如果没有文件选择左侧导航栏中的 Download -> ADD+，选择你刚刚创建的文件夹里面的***_RUNS文件，选择 phy_1 文件夹，选择刚刚生成的 bit 文件.
+确保连线无误后, 点击左侧栏中的 Run, 这里一般系统会默认指定刚生成的比特流文件路径. 但这里仍要格外注意, 因为当你在多个工程间来回穿梭时, TD 可能会突然抽风, 给你默认指定一个其他工程中的比特流文件, 如果你没有注意而将它下载了进去, 那么接下来的调试工作可能会让你心态爆炸. 如果没有文件选择左侧导航栏中的 Download -> ADD+, 选择你刚刚创建的文件夹里面的***_RUNS文件, 选择 phy_1 文件夹, 选择刚刚生成的 bit 文件.
 
 <center><img src="/img/lab2/pics/15.png" alt="29" style="zoom:70%;" /></center><center style="color:#0";>Bit文件选择</center>
 
@@ -122,12 +122,12 @@
 
 ### JTAG驱动安装
 
-初次下载比特流到FPGA上的时候，有可能会发现没有找到FPGA板子，原因是没有添加驱动。在windows的设备管理器的串行总线设备中，你可能会发现有有一个设备是这样：
+初次下载比特流到 FPGA 上的时候, 有可能会发现没有找到 FPGA 板子, 原因是没有添加驱动. 在 windows 的设备管理器的串行总线设备中, 你可能会发现有有一个设备是这样：
 
 <center><img src="/img/lab2/pics/21.png" alt="29" style="zoom:70%;" /></center>
 
-这个时候，你需要右键：更新驱动程序-浏览我的电脑以查找驱动程序，选择Anlogic TD的安装目录下的Driver文件夹`".../Anlogic/TD5.6.2/driver"`，勾选包括子文件夹，之后它会自动找到驱动，然后你会发现设备名称改变了：
+这个时候, 你需要右键：更新驱动程序-浏览我的电脑以查找驱动程序, 选择 Anlogic TD 的安装目录下的 Driver 文件夹`".../Anlogic/TD5.6.2/driver"`, 勾选包括子文件夹, 之后它会自动找到驱动, 然后你会发现设备名称改变了: 
 
 <center><img src="/img/lab2/pics/23.png" alt="29" style="zoom:70%;" /></center>
 
-这个时候，在TD里面重新打开Download，应该能找到设备了。
+这个时候, 在 TD 里面重新打开 Download, 应该能找到设备了。
