@@ -1,0 +1,1125 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.1.1 GCD 硬件加速器设计 · WQ GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/styles.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sec_2.html" />
+    
+    
+    <link rel="prev" href="introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../lab0/introduction.html">
+            
+                <a href="../lab0/introduction.html">
+            
+                    
+                    LAB0: 工欲善其事 必先利其器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../lab0/FPGAintro.html">
+            
+                <a href="../lab0/FPGAintro.html">
+            
+                    
+                    FPGA 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../lab0/whyfpga.html">
+            
+                <a href="../lab0/whyfpga.html">
+            
+                    
+                    为什么是 FPGA？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../lab0/design_method.html">
+            
+                <a href="../lab0/design_method.html">
+            
+                    
+                    设计方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../lab0/board_intro.html">
+            
+                <a href="../lab0/board_intro.html">
+            
+                    
+                    平台介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../lab0/intro_tools.html">
+            
+                <a href="../lab0/intro_tools.html">
+            
+                    
+                    软硬件关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../lab0/keil.html">
+            
+                <a href="../lab0/keil.html">
+            
+                    
+                    Keil
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../lab0/td.html">
+            
+                <a href="../lab0/td.html">
+            
+                    
+                    TD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../lab0/modelsim.html">
+            
+                <a href="../lab0/modelsim.html">
+            
+                    
+                    Modelsim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lab1/introduction.html">
+            
+                <a href="../lab1/introduction.html">
+            
+                    
+                    LAB1: "施法"让 CPU 动起来
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lab1/sec_1.html">
+            
+                <a href="../lab1/sec_1.html">
+            
+                    
+                    1.1.1 ARM 汇编回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lab1/sec_2.html">
+            
+                <a href="../lab1/sec_2.html">
+            
+                    
+                    1.1.2 搭建 Keil 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lab1/sec_3.html">
+            
+                <a href="../lab1/sec_3.html">
+            
+                    
+                    1.1.3 运行吧, 第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lab1/sec_5.html">
+            
+                <a href="../lab1/sec_5.html">
+            
+                    
+                    1.2.1 栈 - 函数调用的指挥官
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lab1/sec_6.html">
+            
+                <a href="../lab1/sec_6.html">
+            
+                    
+                    1.2.2 自己动手, 理解函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../lab2/introduction.html">
+            
+                <a href="../lab2/introduction.html">
+            
+                    
+                    LAB2: "点石成金" - 实现你的首个 SoC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../lab2/bus.html">
+            
+                <a href="../lab2/bus.html">
+            
+                    
+                    2.1.1 总线基本概念与原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../lab2/ahblite.html">
+            
+                <a href="../lab2/ahblite.html">
+            
+                    
+                    2.1.2 AHB-Lite 总线介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../lab2/address.html">
+            
+                <a href="../lab2/address.html">
+            
+                    
+                    2.1.3 地址空间 - SoC 的"门牌号系统"
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../lab2/rtl.html">
+            
+                <a href="../lab2/rtl.html">
+            
+                    
+                    2.2.1 硬件部分说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../lab2/keilproj.html">
+            
+                <a href="../lab2/keilproj.html">
+            
+                    
+                    2.2.2 搭建 Keil 工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../lab2/modelsim.html">
+            
+                <a href="../lab2/modelsim.html">
+            
+                    
+                    2.2.3 Modelsim 仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../lab3/introduction.html">
+            
+                <a href="../lab3/introduction.html">
+            
+                    
+                    LAB3: "灯, 等灯, 等灯"-流水灯的几种点法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../lab3/downloadbitstream.html">
+            
+                <a href="../lab3/downloadbitstream.html">
+            
+                    
+                    3.1.1 下载比特流到 FPGA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../lab3/flash.html">
+            
+                <a href="../lab3/flash.html">
+            
+                    
+                    3.1.2 将硬件固化到开发板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../lab3/keil.html">
+            
+                <a href="../lab3/keil.html">
+            
+                    
+                    3.1.3 使用 Keil 调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../lab3/data_storage.html">
+            
+                <a href="../lab3/data_storage.html">
+            
+                    
+                    3.2.1 数据存储器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../lab3/GPIO.html">
+            
+                <a href="../lab3/GPIO.html">
+            
+                    
+                    3.2.2 GPIO 外设实现流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../lab3/WaterLight.html">
+            
+                <a href="../lab3/WaterLight.html">
+            
+                    
+                    3.2.3 硬件流水灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lab4/introduction.html">
+            
+                <a href="../lab4/introduction.html">
+            
+                    
+                    LAB4: 如何召唤"沉睡的软件"
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../lab4/keyboards.html">
+            
+                <a href="../lab4/keyboards.html">
+            
+                    
+                    4.1.1 矩阵键盘原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../lab4/keyboards_waterlight.html">
+            
+                <a href="../lab4/keyboards_waterlight.html">
+            
+                    
+                    4.1.2 使用矩阵键盘4个按键控制流水灯模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../lab4/keyboards_led.html">
+            
+                <a href="../lab4/keyboards_led.html">
+            
+                    
+                    4.1.3 使用矩阵键盘控制数码管显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    LAB5: "吃硬还是吃软？"-软硬协同才是正道
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="sec_1.html">
+            
+                <a href="sec_1.html">
+            
+                    
+                    5.1.1 GCD 硬件加速器设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="sec_2.html">
+            
+                <a href="sec_2.html">
+            
+                    
+                    5.1.2 4x4 矩阵键盘接口设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="sec_3.html">
+            
+                <a href="sec_3.html">
+            
+                    
+                    5.1.3 4 位数码管显示控制器设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="sec_4.html">
+            
+                <a href="sec_4.html">
+            
+                    
+                    5.1.4 综合实验：GCD 计算器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../verilog/introduction.html">
+            
+                <a href="../verilog/introduction.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../verilog/grammar.html">
+            
+                <a href="../verilog/grammar.html">
+            
+                    
+                    Verilog基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../verilog/enable_signal.html">
+            
+                <a href="../verilog/enable_signal.html">
+            
+                    
+                    使能信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../verilog/decoder.html">
+            
+                <a href="../verilog/decoder.html">
+            
+                    
+                    总线译码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../faq/introduction.html">
+            
+                <a href="../faq/introduction.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../add_notice.html">
+            
+                <a href="../add_notice.html">
+            
+                    
+                    补充通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../about/introduction.html">
+            
+                <a href="../about/introduction.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.1.1 GCD 硬件加速器设计</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="gcd-&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;&#x8BBE;&#x8BA1;">GCD &#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;&#x8BBE;&#x8BA1;</h1>
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="gcd-&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;"><i class="fa fa-flag"></i> GCD &#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;</h3></div><div class="panel-body"><ul>
+<li>&#x5728;&#x8FD9;&#x6B21;&#x5B9E;&#x9A8C;&#x4E2D;, &#x6211;&#x4EEC;&#x5C06;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A; GCD&#xFF08;&#x6700;&#x5927;&#x516C;&#x7EA6;&#x6570;&#xFF09;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;, &#x901A;&#x8FC7;&#x786C;&#x4EF6;&#x5B9E;&#x73B0;&#x8F97;&#x8F6C;&#x76F8;&#x51CF;&#x7B97;&#x6CD5;, &#x8BA9; CPU &#x53EA;&#x9700;&#x8981;&#x5199;&#x5165;&#x4E24;&#x4E2A;&#x6570;, &#x7B49;&#x5F85;&#x8BA1;&#x7B97;&#x5B8C;&#x6210;&#x540E;&#x8BFB;&#x53D6;&#x7ED3;&#x679C;&#x5373;&#x53EF;.</li>
+</ul></div></div>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;">&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;?</h2>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x8F6F;&#x4EF6;-vs-&#x786C;&#x4EF6;"><i class="fa fa-edit"></i> &#x8F6F;&#x4EF6; vs &#x786C;&#x4EF6;</h3></div><div class="panel-body"><p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x8981;&#x8BA1;&#x7B97; GCD(48, 18), &#x7528;&#x8F6F;&#x4EF6;&#x5B9E;&#x73B0;&#x9700;&#x8981; CPU &#x6267;&#x884C;&#x591A;&#x6B21;&#x5FAA;&#x73AF;, &#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x5305;&#x542B;&#x6BD4;&#x8F83;&#x3001;&#x8DF3;&#x8F6C;&#x3001;&#x51CF;&#x6CD5;&#x7B49;&#x6307;&#x4EE4;. &#x800C;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;&#x53EF;&#x4EE5;&#x5728;&#x6BCF;&#x4E2A;&#x65F6;&#x949F;&#x5468;&#x671F;&#x5B8C;&#x6210;&#x4E00;&#x6B21;&#x6BD4;&#x8F83;&#x548C;&#x51CF;&#x6CD5;, &#x5927;&#x5927;&#x63D0;&#x5347;&#x8BA1;&#x7B97;&#x6548;&#x7387;. &#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;, &#x5728;&#x786C;&#x4EF6;&#x8BA1;&#x7B97;&#x671F;&#x95F4;, CPU &#x53EF;&#x4EE5;&#x53BB;&#x505A;&#x5176;&#x4ED6;&#x4E8B;&#x60C5;!</p></div></div>
+<h2 id="gcd-&#x7B97;&#x6CD5;&#x56DE;&#x987E;">GCD &#x7B97;&#x6CD5;&#x56DE;&#x987E;</h2>
+<p>&#x8F97;&#x8F6C;&#x76F8;&#x51CF;&#x6CD5;&#x7684;&#x601D;&#x8DEF;&#x5F88;&#x7B80;&#x5355;:</p>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x6570;&#x6BD4;&#x5927;&#x5C0F;</li>
+<li>&#x5927;&#x7684;&#x51CF;&#x53BB;&#x5C0F;&#x7684;</li>
+<li>&#x91CD;&#x590D;&#x4E0A;&#x8FF0;&#x8FC7;&#x7A0B;, &#x76F4;&#x5230;&#x4E24;&#x6570;&#x76F8;&#x7B49;</li>
+<li>&#x6B64;&#x65F6;&#x7684;&#x503C;&#x5C31;&#x662F;&#x6700;&#x5927;&#x516C;&#x7EA6;&#x6570;</li>
+</ul>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;, &#x8BA1;&#x7B97; GCD(48, 18):</p>
+<table>
+<thead>
+<tr>
+<th>&#x6B65;&#x9AA4;</th>
+<th>A</th>
+<th>B</th>
+<th>&#x64CD;&#x4F5C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>48</td>
+<td>18</td>
+<td>A &gt; B, A = 48 - 18 = 30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>30</td>
+<td>18</td>
+<td>A &gt; B, A = 30 - 18 = 12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>12</td>
+<td>18</td>
+<td>A &lt; B, B = 18 - 12 = 6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>12</td>
+<td>6</td>
+<td>A &gt; B, A = 12 - 6 = 6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>A == B, &#x641E;&#x5B9A;! GCD = 6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x786C;&#x4EF6;&#x6A21;&#x5757;&#x8BBE;&#x8BA1;">&#x786C;&#x4EF6;&#x6A21;&#x5757;&#x8BBE;&#x8BA1;</h2>
+<h3 id="&#x5BC4;&#x5B58;&#x5668;&#x5730;&#x5740;&#x5206;&#x914D;">&#x5BC4;&#x5B58;&#x5668;&#x5730;&#x5740;&#x5206;&#x914D;</h3>
+<p>&#x6211;&#x4EEC;&#x7ED9; GCD &#x52A0;&#x901F;&#x5668;&#x5206;&#x914D;&#x57FA;&#x5730;&#x5740; <code>0x40030000</code>, &#x5185;&#x90E8;&#x6709; 4 &#x4E2A;&#x5BC4;&#x5B58;&#x5668;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5730;&#x5740;</th>
+<th>&#x5BC4;&#x5B58;&#x5668;&#x540D;</th>
+<th>&#x8BFB;/&#x5199;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x40030000</td>
+<td>DATA_A</td>
+<td>R/W</td>
+<td>&#x8F93;&#x5165;&#x6570;&#x636E; A</td>
+</tr>
+<tr>
+<td>0x40030004</td>
+<td>DATA_B</td>
+<td>R/W</td>
+<td>&#x8F93;&#x5165;&#x6570;&#x636E; B&#xFF08;&#x5199;&#x5165;&#x540E;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF09;</td>
+</tr>
+<tr>
+<td>0x40030008</td>
+<td>RESULT</td>
+<td>R</td>
+<td>&#x8BA1;&#x7B97;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>0x4003000C</td>
+<td>STATUS</td>
+<td>R</td>
+<td>&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;, bit0=1 &#x8868;&#x793A;&#x8BA1;&#x7B97;&#x5B8C;&#x6210;</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="gcd-&#x786C;&#x4EF6;&#x4EE3;&#x7801;&#x7EC4;&#x6210;"><i class="fa fa-edit"></i> GCD &#x786C;&#x4EF6;&#x4EE3;&#x7801;&#x7EC4;&#x6210;</h3></div><div class="panel-body"><p><code>AHBlite_GCD.v</code></p><ul>
+<li><strong>&#x529F;&#x80FD;</strong>: &#x6700;&#x5927;&#x516C;&#x7EA6;&#x6570; (GCD) &#x786C;&#x4EF6;&#x52A0;&#x901F;&#x5668;&#x7684; AHB &#x63A5;&#x53E3;&#x5305;&#x88C5;&#x5668;&#x3002;</li>
+<li><strong>&#x5BC4;&#x5B58;&#x5668;&#x6620;&#x5C04;</strong>:<ul>
+<li><code>0x00</code>: &#x8F93;&#x5165; A</li>
+<li><code>0x04</code>: &#x8F93;&#x5165; B</li>
+<li><code>0x08</code>: &#x63A7;&#x5236;&#x5BC4;&#x5B58;&#x5668; (Start)</li>
+<li><code>0x0C</code>: &#x72B6;&#x6001;&#x4E0E;&#x7ED3;&#x679C;&#x5BC4;&#x5B58;&#x5668; (Done, Result)</li>
+</ul>
+</li>
+</ul><p><code>GCD.v</code></p><ul>
+<li><strong>&#x529F;&#x80FD;</strong>: &#x5B9E;&#x73B0;&#x6B27;&#x51E0;&#x91CC;&#x5F97;&#x7B97;&#x6CD5;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x6570;&#x7684;&#x6700;&#x5927;&#x516C;&#x7EA6;&#x6570;&#x3002;</li>
+<li><strong>&#x72B6;&#x6001;&#x673A;</strong>: <code>IDLE</code> -&gt; <code>CALC</code> -&gt; <code>DONE</code>&#x3002;</li>
+</ul></div></div>
+<h3 id="gcd-&#x6838;&#x5FC3;&#x6A21;&#x5757;">GCD &#x6838;&#x5FC3;&#x6A21;&#x5757;</h3>
+<p>GCD &#x6A21;&#x5757;&#x7684;&#x4EE3;&#x7801;&#x4F4D;&#x4E8E; <code>/rtl/GCD.v</code>, &#x4F60;&#x9700;&#x8981;&#x5728;&#x5176;&#x57FA;&#x7840;&#x4E0A;&#x8865;&#x5168;&#x5173;&#x952E;&#x903B;&#x8F91;.</p>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x4EE3;&#x7801;&#x8865;&#x5168;"><i class="fa fa-edit"></i> &#x4EE3;&#x7801;&#x8865;&#x5168;</h3></div><div class="panel-body"><p>&#x6839;&#x636E;&#x8F97;&#x8F6C;&#x76F8;&#x51CF;&#x6CD5;&#x7684;&#x7B97;&#x6CD5;&#x539F;&#x7406;, &#x5B8C;&#x6210;&#x72B6;&#x6001;&#x673A;&#x7684;&#x8BBE;&#x8BA1;.</p></div></div>
+<pre><code class="lang-verilog"><span class="hljs-keyword">case</span>(state)
+            IDLE: <span class="hljs-keyword">begin</span>
+                done &lt;= <span class="hljs-number">1&apos;b0</span>;
+                <span class="hljs-keyword">if</span>(start) <span class="hljs-keyword">begin</span>
+                        <span class="hljs-comment">/********** &#x9700;&#x8981;&#x8865;&#x5145;&#x7684;&#x4EE3;&#x7801; **********/</span>
+                        <span class="hljs-comment">// &#x63D0;&#x793A;: &#x52A0;&#x8F7D;&#x8F93;&#x5165;&#x6570;&#x636E;&#x5230; a_reg &#x548C; b_reg, &#x5207;&#x6362;&#x5230; CALC &#x72B6;&#x6001;</span>
+
+                        <span class="hljs-comment">/************************************/</span>
+                <span class="hljs-keyword">end</span>
+            <span class="hljs-keyword">end</span>
+
+            CALC: <span class="hljs-keyword">begin</span>
+                <span class="hljs-keyword">if</span>(reg_b == <span class="hljs-number">32</span>&apos;d0) <span class="hljs-keyword">begin</span>
+                    result &lt;= reg_a;
+                    done &lt;= <span class="hljs-number">1&apos;b1</span>;
+                    state &lt;= DONE;
+                <span class="hljs-keyword">end</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(reg_a &gt; reg_b) <span class="hljs-keyword">begin</span>
+                        <span class="hljs-comment">/********** &#x9700;&#x8981;&#x8865;&#x5145;&#x7684;&#x4EE3;&#x7801; **********/</span>
+                <span class="hljs-keyword">end</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">begin</span>
+                        <span class="hljs-comment">/********** &#x9700;&#x8981;&#x8865;&#x5145;&#x7684;&#x4EE3;&#x7801; **********/</span>
+                <span class="hljs-keyword">end</span>
+            <span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5B8C;&#x6210;&#x8865;&#x5168;&#x540E;, &#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x5982;&#x4E0B;&#x6240;&#x793A;:</p>
+<pre><code class="lang-verilog"><span class="hljs-keyword">case</span>(state)
+            IDLE: <span class="hljs-keyword">begin</span>
+                done &lt;= <span class="hljs-number">1&apos;b0</span>;
+                <span class="hljs-keyword">if</span>(start) <span class="hljs-keyword">begin</span>
+                    reg_a &lt;= a;
+                    reg_b &lt;= b;
+                    state &lt;= CALC;
+                <span class="hljs-keyword">end</span>
+            <span class="hljs-keyword">end</span>
+
+            CALC: <span class="hljs-keyword">begin</span>
+                <span class="hljs-keyword">if</span>(reg_b == <span class="hljs-number">32</span>&apos;d0) <span class="hljs-keyword">begin</span>
+                    result &lt;= reg_a;
+                    done &lt;= <span class="hljs-number">1&apos;b1</span>;
+                    state &lt;= DONE;
+                <span class="hljs-keyword">end</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(reg_a &gt; reg_b) <span class="hljs-keyword">begin</span>
+                    reg_a &lt;= reg_a - reg_b;
+                <span class="hljs-keyword">end</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">begin</span>
+                    reg_b &lt;= reg_b - reg_a;
+                <span class="hljs-keyword">end</span>
+            <span class="hljs-keyword">end</span>
+</code></pre>
+<h3 id="ahb-lite-&#x603B;&#x7EBF;&#x63A5;&#x53E3;">AHB-Lite &#x603B;&#x7EBF;&#x63A5;&#x53E3;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9; GCD &#x6838;&#x5FC3;&#x52A0;&#x4E0A; AHB-Lite &#x603B;&#x7EBF;&#x63A5;&#x53E3;, &#x8BA9; CPU &#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x5B83;&#x3002;</p>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="ahb-lite-&#x63A5;&#x53E3;&#x7684;&#x4F5C;&#x7528;"><i class="fa fa-edit"></i> AHB-Lite &#x63A5;&#x53E3;&#x7684;&#x4F5C;&#x7528;</h3></div><div class="panel-body"><p>AHB-Lite &#x63A5;&#x53E3;&#x662F; GCD &#x52A0;&#x901F;&#x5668;&#x4E0E; CPU &#x4E4B;&#x95F4;&#x7684;&#x6865;&#x6881;&#x3002;CPU &#x901A;&#x8FC7;&#x603B;&#x7EBF;&#x5411; GCD &#x6A21;&#x5757;&#x5199;&#x5165;&#x64CD;&#x4F5C;&#x6570;, &#x5E76;&#x8BFB;&#x53D6;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x548C;&#x72B6;&#x6001;&#x3002;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x5730;&#x5740;&#x8BD1;&#x7801;&#x3001;&#x8BFB;&#x5199;&#x63A7;&#x5236;&#x7B49;&#x529F;&#x80FD;&#x3002;</p></div></div>
+<h4 id="&#x8BFB;&#x64CD;&#x4F5C;&#x7684;&#x5730;&#x5740;&#x8BD1;&#x7801;">&#x8BFB;&#x64CD;&#x4F5C;&#x7684;&#x5730;&#x5740;&#x8BD1;&#x7801;</h4>
+<p>&#x5728; AHB-Lite &#x603B;&#x7EBF;&#x4E2D;, CPU &#x8BFB;&#x53D6;&#x5916;&#x8BBE;&#x6570;&#x636E;&#x65F6;, &#x9700;&#x8981;&#x6839;&#x636E;&#x5730;&#x5740;&#x9009;&#x62E9;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x3002;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x4E86;&#x8BFB;&#x64CD;&#x4F5C;&#x7684;&#x5730;&#x5740;&#x8BD1;&#x7801;&#x903B;&#x8F91;:</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// Read operations - use latched address</span>
+<span class="hljs-keyword">reg</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] hrdata_reg;
+<span class="hljs-keyword">always</span>@(*) <span class="hljs-keyword">begin</span>
+    <span class="hljs-keyword">case</span>(addr_reg)
+                        <span class="hljs-comment">/********** &#x9700;&#x8981;&#x8865;&#x5145;&#x7684;&#x4EE3;&#x7801; **********/</span>
+    <span class="hljs-keyword">endcase</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x8865;&#x5168;&#x63D0;&#x793A;"><i class="fa fa-lightbulb-o"></i> &#x8865;&#x5168;&#x63D0;&#x793A;</h3></div><div class="panel-body"><p><code>addr_reg</code> &#x662F;&#x9501;&#x5B58;&#x7684;&#x5730;&#x5740;&#x4F4E;&#x4F4D; (&#x901A;&#x5E38;&#x53D6; <code>HADDR[3:2]</code>), &#x7528;&#x4E8E;&#x533A;&#x5206; 4 &#x4E2A;&#x5BC4;&#x5B58;&#x5668;:</p><ul>
+<li><code>2&apos;b00</code> (&#x504F;&#x79FB; 0x00): DATA_A &#x5BC4;&#x5B58;&#x5668;</li>
+<li><code>2&apos;b01</code> (&#x504F;&#x79FB; 0x04): DATA_B &#x5BC4;&#x5B58;&#x5668;  </li>
+<li><code>2&apos;b10</code> (&#x504F;&#x79FB; 0x08): &#x63A7;&#x5236;/&#x542F;&#x52A8;&#x5BC4;&#x5B58;&#x5668;</li>
+<li><code>2&apos;b11</code> (&#x504F;&#x79FB; 0x0C): &#x72B6;&#x6001;&#x548C;&#x7ED3;&#x679C;&#x5BC4;&#x5B58;&#x5668;</li>
+</ul></div></div>
+<p>&#x8865;&#x5168;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x9636;&#x6BB5;&#x7684;&#x4EE3;&#x7801;, &#x5B8C;&#x6210;&#x8865;&#x5168;&#x540E;, &#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x5982;&#x4E0B;&#x6240;&#x793A;:</p>
+<pre><code class="lang-verilog"><span class="hljs-comment">// Read operations - use latched address</span>
+<span class="hljs-keyword">reg</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] hrdata_reg;
+<span class="hljs-keyword">always</span>@(*) <span class="hljs-keyword">begin</span>
+    <span class="hljs-keyword">case</span>(addr_reg)
+        <span class="hljs-number">2&apos;b00</span>: hrdata_reg = reg_a;
+        <span class="hljs-number">2&apos;b01</span>: hrdata_reg = reg_b;
+        <span class="hljs-number">2&apos;b10</span>: hrdata_reg = {<span class="hljs-number">31</span>&apos;b0, start};
+        <span class="hljs-number">2&apos;b11</span>: hrdata_reg = {gcd_done, gcd_result[<span class="hljs-number">30</span>:<span class="hljs-number">0</span>]};  <span class="hljs-comment">// Done in bit[31], result in bit[30:0]</span>
+        <span class="hljs-keyword">default</span>: hrdata_reg = <span class="hljs-number">32</span>&apos;h00000000;
+    <span class="hljs-keyword">endcase</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x4EE3;&#x7801;&#x529F;&#x80FD;&#x8BF4;&#x660E;"><i class="fa fa-comment"></i> &#x4EE3;&#x7801;&#x529F;&#x80FD;&#x8BF4;&#x660E;</h3></div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>&#x5730;&#x5740;</th>
+<th>&#x8868;&#x8FBE;&#x5F0F;</th>
+<th>&#x529F;&#x80FD;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2&apos;b00</code></td>
+<td><code>hrdata_reg = reg_a</code></td>
+<td>&#x8FD4;&#x56DE;&#x64CD;&#x4F5C;&#x6570; A &#x7684;&#x503C;, CPU &#x53EF;&#x4EE5;&#x56DE;&#x8BFB;&#x4E4B;&#x524D;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><code>2&apos;b01</code></td>
+<td><code>hrdata_reg = reg_b</code></td>
+<td>&#x8FD4;&#x56DE;&#x64CD;&#x4F5C;&#x6570; B &#x7684;&#x503C;, CPU &#x53EF;&#x4EE5;&#x56DE;&#x8BFB;&#x4E4B;&#x524D;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><code>2&apos;b10</code></td>
+<td><code>hrdata_reg = {31&apos;b0, start}</code></td>
+<td>&#x8FD4;&#x56DE;&#x542F;&#x52A8;&#x4FE1;&#x53F7;&#x72B6;&#x6001;, bit[0] &#x8868;&#x793A;&#x662F;&#x5426;&#x6B63;&#x5728;&#x542F;&#x52A8;&#x8BA1;&#x7B97;</td>
+</tr>
+<tr>
+<td><code>2&apos;b11</code></td>
+<td><code>hrdata_reg = {gcd_done, gcd_result[30:0]}</code></td>
+<td>&#x5173;&#x952E;&#x5BC4;&#x5B58;&#x5668;: bit[31] &#x4E3A;&#x5B8C;&#x6210;&#x6807;&#x5FD7; <code>gcd_done</code>, bit[30:0] &#x4E3A;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td><code>hrdata_reg = 32&apos;h00000000</code></td>
+<td>&#x975E;&#x6CD5;&#x5730;&#x5740;&#x8FD4;&#x56DE; 0, &#x4FDD;&#x8BC1;&#x603B;&#x7EBF;&#x4E0D;&#x4F1A;&#x8BFB;&#x5230;&#x672A;&#x77E5;&#x503C;</td>
+</tr>
+</tbody>
+</table></div></div>
+<!-- -->
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x8BBE;&#x8BA1;&#x5DE7;&#x601D;"><i class="fa fa-edit"></i> &#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x8BBE;&#x8BA1;&#x5DE7;&#x601D;</h3></div><div class="panel-body"><p>&#x6CE8;&#x610F; <code>2&apos;b11</code> &#x5730;&#x5740;&#x7684;&#x8BBE;&#x8BA1;: &#x5C06; <code>gcd_done</code> &#x653E;&#x5728;&#x6700;&#x9AD8;&#x4F4D; (bit[31]), &#x7ED3;&#x679C;&#x653E;&#x5728;&#x4F4E; 31 &#x4F4D;&#x3002;&#x8FD9;&#x6837; CPU &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x6B21;&#x8BFB;&#x64CD;&#x4F5C;&#x540C;&#x65F6;&#x83B7;&#x53D6;&#x5B8C;&#x6210;&#x72B6;&#x6001;&#x548C;&#x7ED3;&#x679C;:</p><pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> status = GCD-&gt;STATUS;
+<span class="hljs-keyword">if</span> (status &amp; <span class="hljs-number">0x80000000</span>) {          <span class="hljs-comment">// &#x68C0;&#x67E5; bit[31] &#x662F;&#x5426;&#x4E3A; 1</span>
+    <span class="hljs-keyword">uint32_t</span> result = status &amp; <span class="hljs-number">0x7FFFFFFF</span>;  <span class="hljs-comment">// &#x53D6;&#x4F4E; 31 &#x4F4D;&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;</span>
+}
+</code></pre></div></div>
+<!-- -->
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="&#x601D;&#x8003;&#x9898;"><i class="fa fa-lightbulb-o"></i> &#x601D;&#x8003;&#x9898;</h3></div><div class="panel-body"><ol>
+<li>&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x4E24;&#x4E2A;&#x6570;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x662F; 0, &#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;? &#x5982;&#x4F55;&#x6539;&#x8FDB;?</li>
+<li>&#x8F97;&#x8F6C;&#x76F8;&#x51CF;&#x6CD5;&#x6548;&#x7387;&#x4E0D;&#x9AD8; (&#x60F3;&#x60F3; GCD(1000000, 1)), &#x5982;&#x679C;&#x6539;&#x7528;&#x8F97;&#x8F6C;&#x76F8;&#x9664;&#x6CD5;, &#x786C;&#x4EF6;&#x8BE5;&#x600E;&#x4E48;&#x8BBE;&#x8BA1;?</li>
+<li>&#x80FD;&#x5426;&#x8BA9; GCD &#x52A0;&#x901F;&#x5668;&#x652F;&#x6301;&#x4E2D;&#x65AD;, &#x8BA1;&#x7B97;&#x5B8C;&#x6210;&#x540E;&#x901A;&#x77E5; CPU?</li>
+</ol></div></div>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By UESTC Intelligent Chip and System Design Lab. &#x91C7;&#x7528;<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 3.0 &#x4E2D;&#x56FD;&#x5927;&#x9646; &#x8BB8;&#x53EF;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E; 2025-12-03 15:33:18 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page: LAB5: "吃硬还是吃软？"-软硬协同才是正道">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sec_2.html" class="navigation navigation-next " aria-label="Next page: 5.1.2 4x4 矩阵键盘接口设计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.1.1 GCD 硬件加速器设计","level":"1.7.1","depth":2,"next":{"title":"5.1.2 4x4 矩阵键盘接口设计","level":"1.7.2","depth":2,"path":"lab5/sec_2.md","ref":"lab5/sec_2.md","articles":[]},"previous":{"title":"LAB5: \"吃硬还是吃软？\"-软硬协同才是正道","level":"1.7","depth":1,"path":"lab5/introduction.md","ref":"lab5/introduction.md","articles":[{"title":"5.1.1 GCD 硬件加速器设计","level":"1.7.1","depth":2,"path":"lab5/sec_1.md","ref":"lab5/sec_1.md","articles":[]},{"title":"5.1.2 4x4 矩阵键盘接口设计","level":"1.7.2","depth":2,"path":"lab5/sec_2.md","ref":"lab5/sec_2.md","articles":[]},{"title":"5.1.3 4 位数码管显示控制器设计","level":"1.7.3","depth":2,"path":"lab5/sec_3.md","ref":"lab5/sec_3.md","articles":[]},{"title":"5.1.4 综合实验：GCD 计算器","level":"1.7.4","depth":2,"path":"lab5/sec_4.md","ref":"lab5/sec_4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["intopic-toc","callouts","page-footer-ex","livereload","theme-comscore","-sharing"],"styles":{"website":"styles/styles.css"},"pluginsConfig":{"callouts":{"important":{"alert":"danger","picto":"fa-bullhorn"},"danger":{"alert":"danger","picto":"fa-exclamation-circle"},"question":{"alert":"info","picto":"fa-question-circle"},"hint":{"alert":"success","picto":"fa-lightbulb-o"},"showTypeInHeader":false,"must":{"alert":"warning","picto":"fa-edit"},"flag":{"alert":"success","picto":"fa-flag"},"info":{"alert":"info","picto":"fa-info-circle"},"note":{"alert":"info","picto":"fa-edit"},"fread":{"alert":"info","picto":"fa-comment"}},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"导航","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","visible":true},"livereload":{},"page-footer-ex":{"copyright":"By UESTC Intelligent Chip and System Design Lab. 采用[知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WQ GitBook","gitbook":"*"},"file":{"path":"lab5/sec_1.md","mtime":"2025-12-03T07:33:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-12-10T13:53:14.978Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
